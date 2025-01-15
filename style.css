@@ -824,7 +824,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column-reverse;
 min-width: 100vw;
-min-height: 70vh;
+min-height: 60vh;
 }
 
 .container1 .box{
@@ -872,7 +872,7 @@ align-items: center;
 flex-direction: column;
 background-color: rgba(11, 39, 61, 0.637);
 min-width: 100vw;
-min-height: 80vh;
+min-height: 70vh;
 margin-top: 2rem;
 border-radius: 5rem;
 }
