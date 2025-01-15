@@ -744,7 +744,7 @@ justify-content: center;
 align-items: center;
 min-width: 100vw;
 min-height: 10vh;
-top:0;
+top:-0;
 padding: 1rem 2rem;
 }
 
@@ -875,7 +875,7 @@ flex-direction: column;
 background-color: rgba(11, 39, 61, 0.637);
 min-width: 100vw;
 min-height: 70vh;
-margin: 2rem;
+margin-bottom: 2rem;
 border-radius: 5rem;
 }
 
