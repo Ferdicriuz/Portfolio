@@ -823,8 +823,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column-reverse;
-min-width: 120vw;
-min-height: 60vh;
+min-width: 100vw;
+min-height: 80vh;
 }
 
 .container1 .box{
