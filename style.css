@@ -746,6 +746,7 @@ align-items: center;
 min-width: 100vw;
 min-height: 20vh;
 padding: 1rem 2rem;
+border: 1px solid red;
 }
 
 .overlay{
@@ -820,16 +821,18 @@ color: #4faaffcb;
 
 .container1{
 display: flex;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 flex-direction: column-reverse;
 min-width: 100vw;
-min-height: 60vh;
+min-height: 50vh;
+margin-top: 4rem;
 }
 
 .container1 .box{
 width: 40rem;
 height: 40rem;
+margin: 2rem;
 }
 
 .box .inside1{
