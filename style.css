@@ -739,7 +739,7 @@ font-size: 50%;
 }
 
 header{
-position: sticky;
+position: fixed;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -965,7 +965,7 @@ align-items: center;
 background-color: rgba(35, 103, 155, 0.637);
 flex-direction: column;
 min-width: 100vw;
-min-height: 200vh;
+min-height: 150vh;
 border-radius: 5rem;
 }
 
