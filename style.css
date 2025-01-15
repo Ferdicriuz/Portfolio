@@ -762,7 +762,7 @@ border: none;
 nav{
 display: none;
 position: absolute;
-top: 50;
+top: 10;
 width: 60%;
 height: 5vh;
 background-color: #01a1fd8d;
