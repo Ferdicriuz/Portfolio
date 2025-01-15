@@ -824,7 +824,7 @@ justify-content: end;
 align-items: center;
 flex-direction: column-reverse;
 min-width: 100vw;
-min-height: 40vh;
+min-height: 30vh;
 margin-top: 4rem;
 }
 
@@ -888,6 +888,7 @@ color: white;
 width: 50rem;
 font-size: 1.5rem;
 line-height: 1.5;
+padding: 1rem 2rem;
 color: rgba(255, 255, 255, 0.632);
 }
 
