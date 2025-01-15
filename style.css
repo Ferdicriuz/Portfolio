@@ -796,7 +796,7 @@ font-size: 2.7rem;
 }
 
 nav a:hover{
-color:#01a1fdcb;
+color:#ffffffcb;
 font-size: 2.5rem;
 transition: 0.5s ease;
 }
@@ -823,8 +823,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column-reverse;
-min-width: 90vw;
-min-height: 80vh;
+min-width: 100vw;
+min-height: 70vh;
 }
 
 .container1 .box{
@@ -872,7 +872,7 @@ align-items: center;
 flex-direction: column;
 background-color: rgba(11, 39, 61, 0.637);
 min-width: 100vw;
-min-height: 90vh;
+min-height: 80vh;
 margin-top: 2rem;
 border-radius: 5rem;
 }
@@ -883,7 +883,7 @@ color: white;
 }
 
 .container2 .exp{
-width: 70vw;
+width: 50rem;
 font-size: 1.5rem;
 line-height: 1.5;
 color: rgba(255, 255, 255, 0.632);
@@ -914,7 +914,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-width: 60rem;
+width: 50rem;
 height: 10rem;
 text-align: center;
 }
