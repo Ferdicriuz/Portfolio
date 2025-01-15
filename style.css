@@ -738,7 +738,7 @@ font-size: 50%;
 }
 
 header{
-position: fixed;
+position: sticky;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -823,7 +823,7 @@ justify-content: end;
 align-items: center;
 flex-direction: column-reverse;
 min-width: 100vw;
-min-height: 50vh;
+min-height: 40vh;
 margin-top: 4rem;
 }
 
