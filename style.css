@@ -744,7 +744,7 @@ justify-content: center;
 align-items: center;
 min-width: 100vw;
 min-height: 10vh;
-top: 0;
+top: -10;
 padding: 1rem 2rem;
 }
 
@@ -762,7 +762,7 @@ border: none;
 nav{
 display: none;
 position: absolute;
-top: 10;
+bottom: 10;
 width: 60%;
 height: 5vh;
 background-color: #01a1fd8d;
