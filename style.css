@@ -16,7 +16,7 @@ font-size: 65.2%;
 }
 
 header{
-position: sticky;
+position: fixed;
 top: 0;
 display: flex;
 justify-content: center;
@@ -357,7 +357,7 @@ font-size: 50%;
 }
 
 header{
-position: sticky;
+position: fixed;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -744,7 +744,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 min-width: 100vw;
-min-height: 10vh;
+min-height: 20vh;
 padding: 1rem 2rem;
 }
 
@@ -764,8 +764,8 @@ display: none;
 position: absolute;
 top: 100;
 width: 60%;
-height: 10vh;
-background-color: rgba(240, 248, 255, 0.064);
+height: 5vh;
+background-color: rgba(67, 70, 72, 0.251);
 border: 1px solid #01a1fdcb;
 border-radius: 3rem;
 z-index: 99;
@@ -872,7 +872,7 @@ align-items: center;
 flex-direction: column;
 background-color: rgba(11, 39, 61, 0.637);
 min-width: 100vw;
-min-height: 100vh;
+min-height: 90vh;
 margin-top: 2rem;
 border-radius: 5rem;
 }
