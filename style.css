@@ -823,7 +823,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column-reverse;
-min-width: 100vw;
+min-width: 120vw;
 min-height: 60vh;
 }
 
@@ -895,7 +895,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 min-width: 100vw;
-min-height: 200vh;
+min-height: 150vh;
 }
 
 .container3 .box1 h1{
