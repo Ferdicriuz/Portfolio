@@ -16,8 +16,7 @@ font-size: 65.2%;
 }
 
 header{
-position: fixed;
-top: 0;
+position: sticky;
 display: flex;
 justify-content: center;
 align-items: center;
