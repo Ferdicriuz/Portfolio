@@ -225,9 +225,12 @@ color: #ffffffcb;
 
 .container4 .box1{
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
 align-items: center;
-height: 50rem;
+gap: 2rem;
+flex-wrap: wrap;
+padding: 2rem;
+height: auto;
 width: 100%;
 }
 
@@ -316,6 +319,12 @@ background-size: cover;
 
 .container4 .sub3{
 background-image: url('img/swift.jpg');
+background-position: center;
+background-size: cover;
+}
+
+.container4 .sub4{
+background-image: url('img/todo.jpg');
 background-position: center;
 background-size: cover;
 }
