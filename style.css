@@ -93,7 +93,7 @@ background-position: bottom;
 background-size:auto;
 background-repeat: no-repeat;
 min-width: 100vw;
-min-height: 60vh;
+min-height: auto;
 }
 
 .container1 .box{
