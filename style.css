@@ -5,10 +5,11 @@ box-sizing: border-box;
 }
 
 body{
-font-family: "Ubuntu", serif;
-font-weight: 400;
-font-style: normal;
-background-color: rgb(22, 56, 97);
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+background-color: rgb(15, 29, 45);
 }
 
 html{
@@ -16,56 +17,68 @@ font-size: 65.2%;
 scroll-behavior: smooth;
 }
 
-header{
-position: sticky;
-display: flex;
-justify-content: center;
-align-items: center;
-min-width: 100vw;
-min-height: 20vh;
-padding: 1rem 2rem;
+#floating-navbar {
+    position: fixed;
+    bottom: -100px; /* Hidden initially */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent */
+    padding: 10px 0;
+    text-align: center;
+    transition: bottom 0.4s ease-in-out;
+    z-index: 1000;
+    border-radius: 20px;
 }
 
-.overlay{
-display: flex;
-justify-content:center;
-align-items: center;
-min-width: 50vw;
-min-height: 10vh;
-padding: 1rem 2rem;
-background-color: rgba(240, 248, 255, 0.064);
-border: 1px solid #01a1fdcb;
-border-radius: 3rem;
+
+/* Show navbar when scrolled */
+#floating-navbar.show {
+    bottom: 20px; /* Moves up into view */
 }
 
-nav ul{
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-size: 2rem;
-gap: 7rem;
-list-style: none;
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.close-btn:hover {
+    color: red;
 }
 
-nav a{
-text-decoration: none;
-color: rgba(234, 234, 234, 0.509);
+/* Navbar links */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-nav .active{
-color: rgb(255, 255, 255);
-font-size: 2.7rem;
+nav ul li {
+    display: inline;
 }
 
-nav a:hover{
-color:#01a1fdcb;
-font-size: 2.5rem;
-transition: 0.5s ease;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease;
 }
 
-.fa-user{
-font-size: 2rem;
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
+
 
 .bar{
 display: none;
@@ -74,6 +87,11 @@ display: none;
 .container1{
 display: flex;
 justify-content: center;
+flex-direction: column;
+background-image: url('img/background.jpg');
+background-position: bottom;
+background-size:auto;
+background-repeat: no-repeat;
 min-width: 100vw;
 min-height: 60vh;
 }
@@ -81,6 +99,26 @@ min-height: 60vh;
 .container1 .box{
 width: 40rem;
 height: 40rem;
+align-content: center;
+}
+
+.myname{
+width: 100%;
+height: 10rem;
+font-size: 3rem;
+padding-left: 5rem;
+align-content: end;
+color: #ffffff;
+}
+
+
+
+.container1 .override{
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+height: auto;
 }
 
 .box .inside1{
@@ -94,22 +132,87 @@ color: aliceblue;
 margin-top: 2rem;
 }
 
-.box .inside3 a{
+.box .inside2 a{
 text-decoration: none;
 color:#ffffffcb;
-font-size: 3rem;
-border-radius: 1rem;
+font-size: 2.5rem;
+padding-left: 1rem;
 }
 
 .inside3 a:hover{
 color: #01a1fdcb;
 }
 
+.hire {
+    display: inline-block;
+    color: white;
+    border-radius: 50%;
+    transition: 0.3s ease, transform 0.3s ease;
+}
+
+.hire:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Change icon on hover */
+.hire:hover #email-icon {
+    content: "\f2b5"; /* Unicode for fa-handshake-o */
+    font-family: "FontAwesome";
+}
+
+/* Initial hidden state */
+.myname, .box1, .box2 {
+    opacity: 0;
+    transform: translateX(-50px); /* Start slightly to the left */
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Box2 starts from the right */
+.box2 {
+    transform: translateX(50px);
+}
+
+/* When visible, slide to normal position */
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+}
+
+/* Initially visible */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
 .container1 .box2{
 background-image: url("img/my\ photo.jpg");
 background-position: center;
 background-size: cover;
-border-radius: 3rem;}
+border-radius: 10rem;
+}
 
 .container2{
 display: flex;
@@ -118,15 +221,12 @@ align-items: center;
 flex-direction: column;
 background-color: rgba(11, 39, 61, 0.637);
 min-width: 100vw;
-min-height: 100vh;
-margin-top: 2rem;
-border-radius: 5rem;
+min-height: auto;
+margin-top: 3rem;
+padding: 2rem 0;
+border-radius: 2rem;
 }
 
-.container2 h1{
-font-size: 5rem;
-color: white;
-}
 
 .container2 .exp{
 width: 70vw;
@@ -135,13 +235,108 @@ line-height: 1.5;
 color: rgba(255, 255, 255, 0.632);
 }
 
+.exp {
+    display: none; /* Hide details by default */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.exp.show {
+    display: block;
+    max-height: 500px; /* Adjust as needed */
+    padding: 10px 0;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: linear-gradient(to right, rgba(4, 4, 4, 0) 50%, #ffffffc8 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    color: white;
+    padding: 0.5rem 3rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin: auto;
+    transition: background-position 0.5s ease-in-out;
+}
+
+.about:hover {
+    background-position: right;
+    color: #000000;
+}
+/* Icon transition */
+.about i {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Initially hidden content */
+#about-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* Expanded state */
+#about-content.show {
+    max-height: 1000px; /* A temporary max height */
+    opacity: 1;
+}
+
+
+@keyframes fadeArrow {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fading-arrow {
+    animation: fadeArrow 1.5s infinite ease-in-out;
+}
+
+
+/* Initially hide elements */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px); /* Start position */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Slide in from different directions */
+.slide-left {
+    transform: translateX(-50px);
+}
+
+.slide-right {
+    transform: translateX(50px);
+}
+
+.fade-in {
+    transform: translateY(50px);
+}
+
+/* Show animation */
+.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
 .container3{
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 min-width: 100vw;
-min-height: 70vh;
+min-height: auto;
+padding: 3rem 0;
 }
 
 .container3 .box1 h1{
@@ -156,7 +351,7 @@ color: #ffffffcb;
 
 
 .container3 .box{
-width: 90rem;
+width: 100%;
 height: 10rem;
 text-align: center;
 }
@@ -203,27 +398,163 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: rgba(35, 103, 155, 0.637);
+min-width: 100vw;
+min-height:auto;
+}
+
+.container4 .dot{
+display: flex;
+justify-content: right;
+align-items: center;
+width: 100%;
+height: 40rem;
+padding: 5rem;
+}
+
+.container4 .dot{
+background-image: url('img/—Pngtree—abstract\ dot\ white\ polka\ dot_8796915.png');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.container4 .eng{
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+width:50rem;
+height: 40rem;
+}
+
+
+.containerover{
+display: flex;
+justify-content: space-between;
+align-items: center;
+min-width: 100vw;
+min-height:auto;
+}
+
+.containerover .dot{
+display: flex;
+justify-content: left;
+align-items: center;
+width: 100%;
+height: auto;
+padding: 5rem;
+}
+
+.containerover .eng{
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+width:50rem;
+height: auto;
+}
+
+
+
+.containerover1{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgba(35, 103, 155, 0.637);
+min-width: 100vw;
+min-height:auto;
+}
+
+.containerover1 .dot{
+display: flex;
+justify-content: right;
+align-items: center;
+width: 100%;
+height: 40rem;
+padding: 5rem;
+}
+
+.containerover1 .dot{
+background-image: url('img/—Pngtree—abstract\ dot\ white\ polka\ dot_8796915.png');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.containerover1 .eng{
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+width:35rem;
+height: 40rem;
+}
+
+.eng{
+font-size: 2rem;
+color: #ffffff;
+gap: 1rem;
+}
+
+.eng h1{
+font-size: 5rem;
+}
+
+.eng p{
+margin: 1rem 0;
+}
+
+
+.containerover1 .eng a{
+font-size: 1.6rem;
+color: #ffffff;
+text-decoration: none;
+font-weight: 600;
+border: 0.3rem solid #ffffff;
+padding: 1rem 3rem;
+background: linear-gradient(to right, rgba(4, 4, 4, 0) 50%, #ffffff 50%);
+background-size: 200% 100%;
+background-position: right;
+color: rgb(0, 0, 0);
+transition: background-position 0.5s ease-in-out;
+}
+
+.containerover1 a:hover {
+    background-position: left;
+    color: #ffffff;
+}
+
+.containerover1 .eng i{
+padding-left: 1rem;
+}
+
+
+.container5{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgba(35, 103, 155, 0.637);
 flex-direction: column;
 min-width: 100vw;
 min-height: 100vh;
 border-radius: 5rem;
 }
 
-.container4 .box{
+.container5 .box{
 text-align: center;
 }
 
-.container4 .box h1{
+.container5 .box h1{
 font-size: 5rem;
 color: #fffb06cb;
 }
 
-.container4 .box p{
+.container5 .box p{
 font-size: 2rem;
 color: #ffffffcb;
 }
 
-.container4 .box1{
+.container5 .box1{
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -234,7 +565,7 @@ height: auto;
 width: 100%;
 }
 
-.container4 .box1 .extra{
+.container5 .box1 .extra{
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -245,41 +576,41 @@ background-color: rgba(0, 0, 0, 0.498);
 border-radius: 3rem;
 }
 
-.container4 .sub{
+.container5 .sub{
 width: 30rem;
 height: 20rem;
 border-radius: 3rem;
 }
 
-.container4 .sub1{
+.container5 .sub1{
 background-image: url('img/20250114_150826.jpg');
 background-position: center;
 background-size: cover;
 }
 
-.container4 .box1 h1{
+.container5 .box1 h1{
 font-size: 2rem;
 color: white;
 }
 
-.container4 .box1 p{
+.container5 .box1 p{
 font-size: 1.5rem;
 color: rgba(255, 255, 255, 0.683);
 }
 
-.container4 .box .sob {
+.container5 .box .sob {
 width: 30rem;
 text-align: justify;
 }
 
 
-.container4 .sos{
+.container5 .sos{
 display: flex;
 width: 30rem;
 gap: 1rem;
 }
 
-.container4 .sos .git{
+.container5 .sos .git{
 color:rgb(75, 188, 249);
 font-size: 2rem;
 border: 0.1rem solid rgb(75, 188, 249);
@@ -288,14 +619,14 @@ padding: 1rem 2rem;
 border-radius: 1rem;
 }
 
-.container4 .sos .git:hover{
+.container5 .sos .git:hover{
 background-color: white;
 color: black;
 border: none;
 transition: 0.5s ease;
 }
 
-.container4 .sos .demo{
+.container5 .sos .demo{
 color:rgb(0, 0, 0);
 font-size: 2rem;
 background-color:rgb(75, 188, 249);
@@ -365,28 +696,11 @@ html{
 font-size: 50%;
 }
 
-header{
-position: fixed;
-display: flex;
-justify-content: center;
-align-items: center;
-min-width: 100vw;
-min-height: 10vh;
-padding: 1rem 2rem;
+#floating-navbar{
+display: none;
 }
 
-.overlay{
-display: flex;
-justify-content:center;
-align-items: center;
-background-color: transparent;
-width: 100%;
-min-height: 10vh;
-padding: 1rem 2rem;
-border: none;
-}
-
-nav{
+ nav{
 display: none;
 position: absolute;
 top: 100;
@@ -448,8 +762,11 @@ color: #4faaffcb;
 .container1{
 display: flex;
 justify-content: center;
-align-items: center;
-flex-direction: column-reverse;
+flex-direction: column;
+background-image: url('img/background.jpg');
+background-position: bottom;
+background-size:auto;
+background-repeat: no-repeat;
 min-width: 100vw;
 min-height: 60vh;
 }
@@ -457,13 +774,29 @@ min-height: 60vh;
 .container1 .box{
 width: 40rem;
 height: 40rem;
+align-content: center;
+}
+
+.myname{
+width: 100%;
+height: 10rem;
+font-size: 3rem;
+padding-left: 5rem;
+align-content: end;
+color: #ffffff;
+}
+
+
+
+.container1 .override{
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+height: auto;
 }
 
 .box .inside1{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
 font-size: 5rem;
 color: aliceblue;
 }
@@ -471,26 +804,90 @@ color: aliceblue;
 .box .inside2{
 font-size: 2rem;
 color: aliceblue;
-text-align: center;
+margin-top: 2rem;
 }
 
-.box .inside3 a{
-display: none;
+.box .inside2 a{
 text-decoration: none;
 color:#ffffffcb;
-font-size: 3rem;
-border-radius: 1rem;
+font-size: 2.5rem;
+padding-left: 1rem;
 }
 
 .inside3 a:hover{
 color: #01a1fdcb;
 }
 
+.hire {
+    display: inline-block;
+    color: white;
+    border-radius: 50%;
+    transition: 0.3s ease, transform 0.3s ease;
+}
+
+.hire:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Change icon on hover */
+.hire:hover #email-icon {
+    content: "\f2b5"; /* Unicode for fa-handshake-o */
+    font-family: "FontAwesome";
+}
+
+/* Initial hidden state */
+.myname, .box1, .box2 {
+    opacity: 0;
+    transform: translateX(-50px); /* Start slightly to the left */
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Box2 starts from the right */
+.box2 {
+    transform: translateX(50px);
+}
+
+/* When visible, slide to normal position */
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+}
+
+/* Initially visible */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
 .container1 .box2{
 background-image: url("img/my\ photo.jpg");
 background-position: center;
 background-size: cover;
-border-radius: 3rem;}
+border-radius: 10rem;
+}
 
 .container2{
 display: flex;
@@ -499,15 +896,12 @@ align-items: center;
 flex-direction: column;
 background-color: rgba(11, 39, 61, 0.637);
 min-width: 100vw;
-min-height: 100vh;
-margin-top: 2rem;
-border-radius: 5rem;
+min-height: auto;
+margin-top: 3rem;
+padding: 2rem 0;
+border-radius: 2rem;
 }
 
-.container2 h1{
-font-size: 5rem;
-color: white;
-}
 
 .container2 .exp{
 width: 70vw;
@@ -516,13 +910,108 @@ line-height: 1.5;
 color: rgba(255, 255, 255, 0.632);
 }
 
+.exp {
+    display: none; /* Hide details by default */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.exp.show {
+    display: block;
+    max-height: 500px; /* Adjust as needed */
+    padding: 10px 0;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: linear-gradient(to right, rgba(4, 4, 4, 0) 50%, #ffffffc8 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    color: white;
+    padding: 0.5rem 3rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin: auto;
+    transition: background-position 0.5s ease-in-out;
+}
+
+.about:hover {
+    background-position: right;
+    color: #000000;
+}
+/* Icon transition */
+.about i {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Initially hidden content */
+#about-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* Expanded state */
+#about-content.show {
+    max-height: 1000px; /* A temporary max height */
+    opacity: 1;
+}
+
+
+@keyframes fadeArrow {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fading-arrow {
+    animation: fadeArrow 1.5s infinite ease-in-out;
+}
+
+
+/* Initially hide elements */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px); /* Start position */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Slide in from different directions */
+.slide-left {
+    transform: translateX(-50px);
+}
+
+.slide-right {
+    transform: translateX(50px);
+}
+
+.fade-in {
+    transform: translateY(50px);
+}
+
+/* Show animation */
+.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
 .container3{
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 min-width: 100vw;
-min-height: 200vh;
+min-height: auto;
+padding: 3rem 0;
 }
 
 .container3 .box1 h1{
@@ -537,11 +1026,7 @@ color: #ffffffcb;
 
 
 .container3 .box{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-width: 60rem;
+width: 100%;
 height: 10rem;
 text-align: center;
 }
@@ -550,15 +1035,13 @@ text-align: center;
 display: flex;
 justify-content: space-around;
 align-items: center;
-flex-direction: column;
-height: 120rem;
 }
 
 .container3 .icon{
 background-position: center;
 background-size: cover;
-width: 15rem;
-height: 15rem;
+width: 10rem;
+height: 10rem;
 border-radius: 2rem;
 }
 
@@ -590,37 +1073,174 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: rgba(35, 103, 155, 0.637);
+min-width: 100vw;
+min-height:auto;
+}
+
+.container4 .dot{
+display: flex;
+justify-content: right;
+align-items: center;
+width: 100%;
+height: 40rem;
+padding: 5rem;
+}
+
+.container4 .dot{
+background-image: url('img/—Pngtree—abstract\ dot\ white\ polka\ dot_8796915.png');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.container4 .eng{
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+width:50rem;
+height: 40rem;
+}
+
+
+.containerover{
+display: flex;
+justify-content: space-between;
+align-items: center;
+min-width: 100vw;
+min-height:auto;
+}
+
+.containerover .dot{
+display: flex;
+justify-content: left;
+align-items: center;
+width: 100%;
+height: auto;
+padding: 5rem;
+}
+
+.containerover .eng{
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+width:50rem;
+height: auto;
+}
+
+
+
+.containerover1{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgba(35, 103, 155, 0.637);
+min-width: 100vw;
+min-height:auto;
+}
+
+.containerover1 .dot{
+display: flex;
+justify-content: right;
+align-items: center;
+width: 100%;
+height: 40rem;
+padding: 5rem;
+}
+
+.containerover1 .dot{
+background-image: url('img/—Pngtree—abstract\ dot\ white\ polka\ dot_8796915.png');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.containerover1 .eng{
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+width:35rem;
+height: 40rem;
+}
+
+.eng{
+font-size: 2rem;
+color: #ffffff;
+gap: 1rem;
+}
+
+.eng h1{
+font-size: 5rem;
+}
+
+.eng p{
+margin: 1rem 0;
+}
+
+
+.containerover1 .eng a{
+font-size: 1.6rem;
+color: #ffffff;
+text-decoration: none;
+font-weight: 600;
+border: 0.3rem solid #ffffff;
+padding: 1rem 3rem;
+background: linear-gradient(to right, rgba(4, 4, 4, 0) 50%, #ffffff 50%);
+background-size: 200% 100%;
+background-position: right;
+color: rgb(0, 0, 0);
+transition: background-position 0.5s ease-in-out;
+}
+
+.containerover1 a:hover {
+    background-position: left;
+    color: #ffffff;
+}
+
+.containerover1 .eng i{
+padding-left: 1rem;
+}
+
+
+.container5{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgba(35, 103, 155, 0.637);
 flex-direction: column;
 min-width: 100vw;
-min-height: auto;
+min-height: 100vh;
 border-radius: 5rem;
 }
 
-.container4 .box{
-margin-top: 2rem;
+.container5 .box{
 text-align: center;
 }
 
-.container4 .box h1{
+.container5 .box h1{
 font-size: 5rem;
 color: #fffb06cb;
 }
 
-.container4 .box p{
+.container5 .box p{
 font-size: 2rem;
 color: #ffffffcb;
 }
 
-.container4 .box1{
+.container5 .box1{
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
 align-items: center;
+gap: 2rem;
 flex-wrap: wrap;
+padding: 2rem;
 height: auto;
 width: 100%;
 }
 
-.container4 .box1 .extra{
+.container5 .box1 .extra{
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -631,41 +1251,41 @@ background-color: rgba(0, 0, 0, 0.498);
 border-radius: 3rem;
 }
 
-.container4 .sub{
+.container5 .sub{
 width: 30rem;
 height: 20rem;
 border-radius: 3rem;
 }
 
-.container4 .sub1{
+.container5 .sub1{
 background-image: url('img/20250114_150826.jpg');
 background-position: center;
 background-size: cover;
 }
 
-.container4 .box1 h1{
+.container5 .box1 h1{
 font-size: 2rem;
 color: white;
 }
 
-.container4 .box1 p{
+.container5 .box1 p{
 font-size: 1.5rem;
 color: rgba(255, 255, 255, 0.683);
 }
 
-.container4 .box .sob {
+.container5 .box .sob {
 width: 30rem;
 text-align: justify;
 }
 
 
-.container4 .sos{
+.container5 .sos{
 display: flex;
 width: 30rem;
 gap: 1rem;
 }
 
-.container4 .sos .git{
+.container5 .sos .git{
 color:rgb(75, 188, 249);
 font-size: 2rem;
 border: 0.1rem solid rgb(75, 188, 249);
@@ -674,14 +1294,14 @@ padding: 1rem 2rem;
 border-radius: 1rem;
 }
 
-.container4 .sos .git:hover{
+.container5 .sos .git:hover{
 background-color: white;
 color: black;
 border: none;
 transition: 0.5s ease;
 }
 
-.container4 .sos .demo{
+.container5 .sos .demo{
 color:rgb(0, 0, 0);
 font-size: 2rem;
 background-color:rgb(75, 188, 249);
