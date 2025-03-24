@@ -89,8 +89,7 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 background-image: url('img/background.jpg');
-background-position: bottom;
-background-size:auto;
+background-size:cover;
 background-repeat: no-repeat;
 min-width: 100vw;
 min-height: auto;
@@ -219,12 +218,11 @@ display: flex;
 justify-content: space-around;
 align-items: center;
 flex-direction: column;
-background-color: rgba(11, 39, 61, 0.637);
+background-color: rgba(35, 103, 155, 0.637);
 min-width: 100vw;
 min-height: auto;
 margin-top: 3rem;
 padding: 2rem 0;
-border-radius: 2rem;
 }
 
 
@@ -486,7 +484,7 @@ display: flex;
 justify-content: center;
 align-items: start;
 flex-direction: column;
-width:35rem;
+width:40rem;
 height: 40rem;
 }
 
@@ -529,136 +527,105 @@ padding-left: 1rem;
 }
 
 
-.container5{
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: rgba(35, 103, 155, 0.637);
-flex-direction: column;
-min-width: 100vw;
-min-height: 100vh;
-border-radius: 5rem;
+.container5 {
+    min-width: 100vw;
+    height: auto;
+    text-align: center;
+    padding: 50px;
+    background-color: transparent;
 }
 
-.container5 .box{
-text-align: center;
+
+.container5 .boxx {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
 }
 
-.container5 .box h1{
-font-size: 5rem;
-color: #fffb06cb;
-}
-
-.container5 .box p{
-font-size: 2rem;
-color: #ffffffcb;
-}
-
-.container5 .box1{
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 2rem;
-flex-wrap: wrap;
-padding: 2rem;
-height: auto;
-width: 100%;
-}
-
-.container5 .box1 .extra{
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-direction: column;
-width: 35rem;
-height: 40rem;
-background-color: rgba(0, 0, 0, 0.498);
-border-radius: 3rem;
-}
-
-.container5 .sub{
-width: 30rem;
-height: 20rem;
-border-radius: 3rem;
-}
-
-.container5 .sub1{
-background-image: url('img/20250114_150826.jpg');
-background-position: center;
-background-size: cover;
-}
-
-.container5 .box1 h1{
-font-size: 2rem;
+.container5 .box h1 {
+font-size:6rem ;
 color: white;
+padding: 2rem 0;
 }
 
-.container5 .box1 p{
-font-size: 1.5rem;
-color: rgba(255, 255, 255, 0.683);
-}
-
-.container5 .box .sob {
-width: 30rem;
-text-align: justify;
+.container5 .box p {
+font-size:2rem ;
+color: yellow;
 }
 
 
-.container5 .sos{
-display: flex;
-width: 30rem;
-gap: 1rem;
+.container5 .boxx h1 {
+font-size:4rem ;
 }
 
-.container5 .sos .git{
-color:rgb(75, 188, 249);
-font-size: 2rem;
-border: 0.1rem solid rgb(75, 188, 249);
-text-decoration: none;
-padding: 1rem 2rem;
-border-radius: 1rem;
+.container5 .boxx p {
+font-size:2rem ;
 }
 
-.container5 .sos .git:hover{
-background-color: white;
-color: black;
-border: none;
-transition: 0.5s ease;
+
+.container5 .extra {
+    position: relative;
+    width: 50rem;
+    height: 40rem;
+    overflow: hidden;
+    border: 1px solid white;
 }
 
-.container5 .sos .demo{
-color:rgb(0, 0, 0);
-font-size: 2rem;
-background-color:rgb(75, 188, 249);
-text-decoration: none;
-padding: 1rem 2rem;
-border-radius: 1rem;
+.container5 .sub {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.container4 .sos .demo:hover{
-color:rgb(0, 0, 0);
-font-size: 2rem;
-background-color: white;
-transition: 0.5s ease;
+.container5 .sub1 { background-image: url('img/20250114_150826.jpg'); }
+.container5 .sub2 { background-image: url('img/betfree.jpg'); }
+.container5 .sub3 { background-image: url('img/swift.jpg'); }
+.container5 .sub4 { background-image: url('img/todo.jpg'); }
+
+.container5 .sob, .sos {
+    position: absolute;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
 }
 
-.container4 .sub2{
-background-image: url('img/betfree.jpg');
-background-position: center;
-background-size: cover;
+.container5 .sob {
+    top: 30%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.container4 .sub3{
-background-image: url('img/swift.jpg');
-background-position: center;
-background-size: cover;
+.container5 .sos {
+    bottom: 1rem;
 }
 
-.container4 .sub4{
-background-image: url('img/todo.jpg');
-background-position: center;
-background-size: cover;
+.container5 .sos a {
+    text-decoration: none;
+    color: white;
+    font-size: 5rem;
+    margin: 0 3rem;
+    display: inline-block;
 }
+
+/* Hide background image & show text on hover */
+.container5 .extra:hover .sub {
+    opacity: 0;
+}
+
+.container5 .extra:hover .sob,
+.container5 .extra:hover .sos {
+    opacity: 1;
+}
+
+
 
 footer{
 display: flex;
@@ -678,7 +645,7 @@ footer .fa:hover{
 color: rgb(75, 188, 249);
 }
 
-@media (max-width:768px){
+/* @media (max-width:768px){ */
 *{
 padding: 0;
 margin: 0;
@@ -1203,529 +1170,6 @@ transition: background-position 0.5s ease-in-out;
 padding-left: 1rem;
 }
 
-
-.container5{
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: rgba(35, 103, 155, 0.637);
-flex-direction: column;
-min-width: 100vw;
-min-height: 100vh;
-border-radius: 5rem;
-}
-
-.container5 .box{
-text-align: center;
-}
-
-.container5 .box h1{
-font-size: 5rem;
-color: #fffb06cb;
-}
-
-.container5 .box p{
-font-size: 2rem;
-color: #ffffffcb;
-}
-
-.container5 .box1{
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 2rem;
-flex-wrap: wrap;
-padding: 2rem;
-height: auto;
-width: 100%;
-}
-
-.container5 .box1 .extra{
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-direction: column;
-width: 35rem;
-height: 40rem;
-background-color: rgba(0, 0, 0, 0.498);
-border-radius: 3rem;
-}
-
-.container5 .sub{
-width: 30rem;
-height: 20rem;
-border-radius: 3rem;
-}
-
-.container5 .sub1{
-background-image: url('img/20250114_150826.jpg');
-background-position: center;
-background-size: cover;
-}
-
-.container5 .box1 h1{
-font-size: 2rem;
-color: white;
-}
-
-.container5 .box1 p{
-font-size: 1.5rem;
-color: rgba(255, 255, 255, 0.683);
-}
-
-.container5 .box .sob {
-width: 30rem;
-text-align: justify;
-}
-
-
-.container5 .sos{
-display: flex;
-width: 30rem;
-gap: 1rem;
-}
-
-.container5 .sos .git{
-color:rgb(75, 188, 249);
-font-size: 2rem;
-border: 0.1rem solid rgb(75, 188, 249);
-text-decoration: none;
-padding: 1rem 2rem;
-border-radius: 1rem;
-}
-
-.container5 .sos .git:hover{
-background-color: white;
-color: black;
-border: none;
-transition: 0.5s ease;
-}
-
-.container5 .sos .demo{
-color:rgb(0, 0, 0);
-font-size: 2rem;
-background-color:rgb(75, 188, 249);
-text-decoration: none;
-padding: 1rem 2rem;
-border-radius: 1rem;
-}
-
-.container4 .sos .demo:hover{
-color:rgb(0, 0, 0);
-font-size: 2rem;
-background-color: white;
-transition: 0.5s ease;
-}
-
-.container4 .sub2{
-background-image: url('img/betfree.jpg');
-background-position: center;
-background-size: cover;
-}
-
-.container4 .sub3{
-background-image: url('img/swift.jpg');
-background-position: center;
-background-size: cover;
-}
-
-.container4 .sub4{
-background-image: url('img/todo.jpg');
-background-position: center;
-background-size: cover;
-}
-
-footer{
-display: flex;
-justify-content: center;
-align-items: center;
-min-width: 100vw;
-min-height: 10vh;
-}
-
-footer .fa{
-color: white;
-font-size: 3rem;
-margin: 2rem;
-}
-
-footer .fa:hover{
-color: rgb(75, 188, 249);
-}
-}
-
-
-@media (max-width:450px){
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-}
-
-body{
-font-family: "Ubuntu", serif;
-font-weight: 400;
-font-style: normal;
-background-color: rgb(22, 56, 97);
-}
-
-html{
-font-size: 50%;
-}
-
-header{
-position: fixed;
-display: flex;
-justify-content: center;
-align-items: center;
-min-width: 100vw;
-min-height: 10vh;
-top:-0;
-padding: 1rem 2rem;
-}
-
-.overlay{
-display: flex;
-justify-content:center;
-align-items: center;
-background-color: transparent;
-width: 100%;
-min-height: 10vh;
-padding: 1rem 2rem;
-border: none;
-}
-
-nav{
-display: none;
-position: absolute;
-bottom:0;
-width: 60%;
-height: 5vh;
-background-color: #01a1fd8d;
-border: 1px solid #01a1fdcb;
-border-radius: 3rem;
-z-index: 99;
-}
-
-nav.show{
-display: flex;
-padding-left: 4rem;
-}
-
-nav ul{
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-size: 2rem;
-gap: 4rem;
-list-style: none;
-}
-
-nav a{
-text-decoration: none;
-color: rgba(234, 234, 234, 0.509);
-}
-
-nav .active{
-color: rgb(255, 255, 255);
-font-size: 2.7rem;
-}
-
-nav a:hover{
-color:#ffffffcb;
-font-size: 2.5rem;
-transition: 0.5s ease;
-}
-
-.fa-user{
-font-size: 2rem;
-}
-
-.menu-icon{
-display: flex;
-font-size: 3rem;
-color: white;
-background-color: transparent;
-border: none;
-}
-
-.bar:hover{
-color: #4faaffcb;
-}
-
-
-.container1{
-display: flex;
-justify-content: end;
-align-items: center;
-flex-direction: column-reverse;
-min-width: 100vw;
-min-height: 30vh;
-margin-top: 4rem;
-}
-
-.container1 .box{
-width: 40rem;
-height: 40rem;
-margin: 2rem;
-}
-
-.box .inside1{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-font-size: 5rem;
-color: aliceblue;
-}
-
-.box .inside2{
-font-size: 2rem;
-color: aliceblue;
-text-align: center;
-}
-
-.box .inside3 a{
-display: none;
-text-decoration: none;
-color:#ffffffcb;
-font-size: 3rem;
-border-radius: 1rem;
-}
-
-.inside3 a:hover{
-color: #01a1fdcb;
-}
-
-.container1 .box2{
-background-image: url("img/my\ photo.jpg");
-background-position: center;
-background-size: cover;
-border-radius: 3rem;}
-
-.container2{
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-direction: column;
-background-color: rgba(11, 39, 61, 0.637);
-min-width: 100vw;
-min-height: 70vh;
-margin-bottom: 2rem;
-border-radius: 5rem;
-}
-
-.container2 h1{
-font-size: 5rem;
-color: white;
-}
-
-.container2 .exp{
-width: 50rem;
-font-size: 1.5rem;
-line-height: 1.5;
-padding: 1rem 2rem;
-color: rgba(255, 255, 255, 0.632);
-}
-
-.container3{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-min-width: 100vw;
-min-height: 120vh;
-}
-
-.container3 .box1 h1{
-font-size: 5rem;
-color: #01a1fdcb;
-}
-
-.container3 .box1 p{
-font-size: 2rem;
-color: #ffffffcb;
-}
-
-
-.container3 .box{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-width: 50rem;
-height: 10rem;
-text-align: center;
-}
-
-.container3 .box2{
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-direction: column;
-height: 120rem;
-}
-
-.container3 .icon{
-background-position: center;
-background-size: cover;
-width: 15rem;
-height: 15rem;
-border-radius: 2rem;
-}
-
-.container3 .icon1{
-background-image: url('img/html.jpg');
-}
-
-.container3 .icon2{
-background-image: url('img/css.jpg');
-}
-
-
-.container3 .icon3{
-background-image: url('img/js.jpg');
-}
-
-.container3 .icon4{
-background-image: url('img/git.jpg');
-}
-
-
-.container3 .icon5{
-background-image: url('img/github.jpg');
-}
-
-
-.container4{
-display: flex;
-justify-content: start;
-align-items: center;
-background-color: rgba(35, 103, 155, 0.637);
-flex-direction: column;
-min-width: 100vw;
-height: auto;
-border-radius: 5rem;
-}
-
-.container4 .box{
-margin-top: 2rem;
-text-align: center;
-}
-
-.container4 .box h1{
-font-size: 5rem;
-color: #fffb06cb;
-}
-
-.container4 .box p{
-font-size: 2rem;
-color: #ffffffcb;
-}
-
-.container4 .box1{
-display: flex;
-justify-content: space-around;
-flex-direction: column;
-align-items: center;
-height: auto;
-width: 100%;
-}
-
-.container4 .box1 .extra{
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-direction: column;
-width: 35rem;
-height: 40rem;
-background-color: rgba(0, 0, 0, 0.498);
-border-radius: 3rem;
-}
-
-.container4 .sub{
-width: 30rem;
-height: 20rem;
-border-radius: 3rem;
-}
-
-.container4 .sub1{
-background-image: url('img/20250114_150826.jpg');
-background-position: center;
-background-size: cover;
-}
-
-.container4 .box1 h1{
-font-size: 2rem;
-color: white;
-}
-
-.container4 .box1 p{
-font-size: 1.5rem;
-color: rgba(255, 255, 255, 0.683);
-}
-
-.container4 .box .sob {
-width: 30rem;
-text-align: justify;
-}
-
-
-.container4 .sos{
-display: flex;
-width: 30rem;
-gap: 1rem;
-}
-
-.container4 .sos .git{
-color:rgb(75, 188, 249);
-font-size: 2rem;
-border: 0.1rem solid rgb(75, 188, 249);
-text-decoration: none;
-padding: 1rem 2rem;
-border-radius: 1rem;
-}
-
-.container4 .sos .git:hover{
-background-color: white;
-color: black;
-border: none;
-transition: 0.5s ease;
-}
-
-.container4 .sos .demo{
-color:rgb(0, 0, 0);
-font-size: 2rem;
-background-color:rgb(75, 188, 249);
-text-decoration: none;
-padding: 1rem 2rem;
-border-radius: 1rem;
-}
-
-.container4 .sos .demo:hover{
-color:rgb(0, 0, 0);
-font-size: 2rem;
-background-color: white;
-transition: 0.5s ease;
-}
-
-.container4 .sub2{
-background-image: url('img/betfree.jpg');
-background-position: center;
-background-size: cover;
-}
-
-.container4 .sub3{
-background-image: url('img/swift.jpg');
-background-position: center;
-background-size: cover;
-}
-
-.container4 .sub4{
-background-image: url('img/todo.jpg');
-background-position: center;
-background-size: cover;
-}
 
 footer{
 display: flex;
