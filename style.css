@@ -80,7 +80,7 @@ nav ul li a:hover {
 }
 
 
-.bar{
+.bar, #menunav{
 display: none;
 }
 
@@ -340,6 +340,7 @@ padding: 3rem 0;
 
 .container3 .box1 h1{
 font-size: 5rem;
+margin-bottom: 1rem;
 color: #01a1fdcb;
 }
 
@@ -351,7 +352,7 @@ color: #ffffffcb;
 
 .container3 .box{
 width: 100%;
-height: 10rem;
+height: 12rem;
 text-align: center;
 }
 
@@ -369,6 +370,7 @@ width: 10rem;
 height: 10rem;
 border-radius: 2rem;
 }
+
 
 .container3 .icon1{
 background-image: url('img/html.jpg');
@@ -668,71 +670,71 @@ scroll-behavior: smooth;
 }
 
 #floating-navbar {
-    position: fixed;
-    bottom: -100px; /* Hidden initially */
-    left: 45%;
-    transform: translateX(-50%);
-    width: 80%;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent */
-    padding: 2rem 0;
-    text-align: center;
-    transition: bottom 0.4s ease-in-out;
-    z-index: 1000;
-    border-radius: 20px;
+    display: none;
+    
 }
 
-
-/* Show navbar when scrolled */
-#floating-navbar.show {
-    bottom: 5rem; /* Moves up into view */
+.butt{
+min-width: 100vw;
+min-height: 5vh;
+padding: 1rem 2rem;
 }
-
-/* Close button */
-.close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 15px;
-    font-size: 3rem;
-    color: white;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-.close-btn:hover {
-    color: red;
-}
-
-/* Navbar links */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: 0.3s ease;
-}
-
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
 
 .bar{
-display: none;
+display: flex;
+border: none;
+background-color: transparent;
+font-size: 3rem;
+color: whitesmoke;
 }
+
+#menunav {
+    display: none; /* Start hidden */
+}
+
+#menunav.show {
+    display: block; /* Show when the class is added */
+}
+
+#menunav {
+    opacity: 10;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#menunav.show {
+    opacity: 10;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#menunav ul{
+position: absolute;
+background-color: #ffffff;
+color: #000000;
+display: flex;
+flex-direction: column;
+}
+
+
+#menunav ul li {
+    display: flex;
+    margin: 1rem 0;
+}
+
+#menunav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#menunav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 
 .container1{
 display: flex;

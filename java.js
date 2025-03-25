@@ -1,11 +1,11 @@
 "use strict"
 
-// document.querySelector(".menu-icon").addEventListener("click", function(){
-// const menuLinks = document.querySelector("#menu-links");
-// const icon = document.querySelector("#bars");
-// menuLinks.classList.toggle("show");
-// icon.classList.toggle("fa-user-times");
-// });
+document.querySelector(".menu-icon").addEventListener("click", function(){
+const menuLinks = document.querySelector("#menunav");
+const icon = document.querySelector("#bars");
+menuLinks.classList.toggle("show");
+icon.classList.toggle("fa-user-times");
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-icon");
