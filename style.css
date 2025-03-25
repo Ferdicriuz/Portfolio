@@ -536,7 +536,10 @@ padding-left: 1rem;
     height: auto;
     text-align: center;
     padding: 50px;
-    background-color: transparent;
+    background-image: url('img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -551,13 +554,13 @@ padding-left: 1rem;
 
 .container5 .box h1 {
 font-size:6rem ;
-color: white;
+color: rgb(0, 0, 0);
 padding: 2rem 0;
 }
 
 .container5 .box p {
 font-size:2rem ;
-color: yellow;
+color: rgb(0, 0, 0);
 }
 
 
@@ -573,37 +576,48 @@ font-size:2rem ;
 .container5 .extra {
     position: relative;
     width: 50rem;
-    height: 40rem;
+    height: 50rem;
+    background-color: #ffffff;
     overflow: hidden;
-    border: 1px solid white;
+    border: 1px solid rgb(139, 201, 251);
 }
 
 .container5 .sub {
     width: 100%;
     height: 100%;
+    gap: 2rem;
     background-size: cover;
     background-position: center;
     transition: opacity 0.3s ease-in-out;
 }
 
 .container5 .sub1 { background-image: url('img/20250114_150826.jpg'); }
-.container5 .sub2 { background-image: url('img/betfree.jpg'); }
-.container5 .sub3 { background-image: url('img/swift.jpg'); }
-.container5 .sub4 { background-image: url('img/todo.jpg'); }
+.container5 .sub2 { background-image: url('img/betfree.svg'); 
+background-size: cover;
+background-repeat: no-repeat;}
+.container5 .sub3 { background-image: url('img/swift.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center; }
+.container5 .sub4 { background-image: url('img/todo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+background-position: center;  }
 
 .container5 .sob, .sos {
     position: absolute;
     width: 100%;
     padding: 1.5rem;
     text-align: center;
-    color: white;
+    align-content: start;
+    color: rgb(0, 0, 0);
     font-size: 1.2rem;
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
 }
 
 .container5 .sob {
-    top: 30%;
+    top: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -613,7 +627,7 @@ font-size:2rem ;
 
 .container5 .sos a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 5rem;
     margin: 0 3rem;
     display: inline-block;
@@ -629,14 +643,45 @@ font-size:2rem ;
     opacity: 1;
 }
 
+.back{
+min-height:auto;
+min-width: 100%;
+text-align: left;
+}
 
+.back a{
+color: white;
+font-size: 4rem;
+}
 
 footer{
 display: flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
 min-width: 100vw;
-min-height: 10vh;
+min-height: auto;
+}
+
+.social{
+width: 100%;
+text-align: center;
+padding-top: 2rem;
+color: yellow;
+}
+
+.copyright{
+width: 80%;
+height: 5rem;
+text-align: center;
+align-content: center;
+border-top: 1px solid gray;
+}
+
+.copyright p, a{
+font-size: 1.3rem;
+color: #ffffff;
+text-decoration: none;
 }
 
 footer .fa{
@@ -880,7 +925,7 @@ padding: 2rem 0;
 
 
 .container2 .exp{
-width: 70vw;
+width: 70%;
 font-size: 1.5rem;
 line-height: 1.5;
 color: rgba(255, 255, 255, 0.632);
@@ -1189,7 +1234,10 @@ padding-left: 1rem;
     height: auto;
     text-align: center;
     padding: 50px;
-    background-color: transparent;
+    background-image: url('img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -1204,13 +1252,13 @@ padding-left: 1rem;
 
 .container5 .box h1 {
 font-size:6rem ;
-color: white;
+color: rgb(0, 0, 0);
 padding: 2rem 0;
 }
 
 .container5 .box p {
 font-size:2rem ;
-color: yellow;
+color: rgb(0, 0, 0);
 }
 
 
@@ -1226,37 +1274,48 @@ font-size:2rem ;
 .container5 .extra {
     position: relative;
     width: 50rem;
-    height: 40rem;
+    height: 50rem;
+    background-color: #ffffff;
     overflow: hidden;
-    border: 1px solid white;
+    border: 1px solid rgb(139, 201, 251);
 }
 
 .container5 .sub {
     width: 100%;
     height: 100%;
+    gap: 2rem;
     background-size: cover;
     background-position: center;
     transition: opacity 0.3s ease-in-out;
 }
 
 .container5 .sub1 { background-image: url('img/20250114_150826.jpg'); }
-.container5 .sub2 { background-image: url('img/betfree.jpg'); }
-.container5 .sub3 { background-image: url('img/swift.jpg'); }
-.container5 .sub4 { background-image: url('img/todo.jpg'); }
+.container5 .sub2 { background-image: url('img/betfree.svg'); 
+background-size: cover;
+background-repeat: no-repeat;}
+.container5 .sub3 { background-image: url('img/swift.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center; }
+.container5 .sub4 { background-image: url('img/todo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+background-position: center;  }
 
 .container5 .sob, .sos {
     position: absolute;
     width: 100%;
     padding: 1.5rem;
     text-align: center;
-    color: white;
+    align-content: start;
+    color: rgb(0, 0, 0);
     font-size: 1.2rem;
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
 }
 
 .container5 .sob {
-    top: 30%;
+    top: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -1266,7 +1325,7 @@ font-size:2rem ;
 
 .container5 .sos a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 5rem;
     margin: 0 3rem;
     display: inline-block;
@@ -1281,8 +1340,6 @@ font-size:2rem ;
 .container5 .extra:hover .sos {
     opacity: 1;
 }
-
-
 
 footer{
 display: flex;
@@ -1325,67 +1382,8 @@ scroll-behavior: smooth;
 }
 
 #floating-navbar {
-    position: fixed;
-    bottom: -100px; /* Hidden initially */
-    left: 45%;
-    transform: translateX(-50%);
-    width: 80%;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent */
-    padding: 2rem 0;
-    text-align: center;
-    transition: bottom 0.4s ease-in-out;
-    z-index: 1000;
-    border-radius: 20px;
+display: none;
 }
-
-
-/* Show navbar when scrolled */
-#floating-navbar.show {
-    bottom: 5rem; /* Moves up into view */
-}
-
-/* Close button */
-.close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 15px;
-    font-size: 3rem;
-    color: white;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-.close-btn:hover {
-    color: red;
-}
-
-/* Navbar links */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: 0.3s ease;
-}
-
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
 
 .bar{
 display: none;
@@ -1536,7 +1534,7 @@ padding: 2rem 0;
 
 
 .container2 .exp{
-width: 70vw;
+width: 70%;
 font-size: 1.5rem;
 line-height: 1.5;
 color: rgba(255, 255, 255, 0.632);
@@ -1846,7 +1844,10 @@ padding-left: 1rem;
     height: auto;
     text-align: center;
     padding: 50px;
-    background-color: transparent;
+    background-image: url('img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -1861,13 +1862,13 @@ padding-left: 1rem;
 
 .container5 .box h1 {
 font-size:6rem ;
-color: white;
+color: rgb(0, 0, 0);
 padding: 2rem 0;
 }
 
 .container5 .box p {
 font-size:2rem ;
-color: yellow;
+color: rgb(0, 0, 0);
 }
 
 
@@ -1883,37 +1884,48 @@ font-size:2rem ;
 .container5 .extra {
     position: relative;
     width: 50rem;
-    height: 40rem;
+    height: 50rem;
+    background-color: #ffffff;
     overflow: hidden;
-    border: 1px solid white;
+    border: 1px solid rgb(139, 201, 251);
 }
 
 .container5 .sub {
     width: 100%;
     height: 100%;
+    gap: 2rem;
     background-size: cover;
     background-position: center;
     transition: opacity 0.3s ease-in-out;
 }
 
 .container5 .sub1 { background-image: url('img/20250114_150826.jpg'); }
-.container5 .sub2 { background-image: url('img/betfree.jpg'); }
-.container5 .sub3 { background-image: url('img/swift.jpg'); }
-.container5 .sub4 { background-image: url('img/todo.jpg'); }
+.container5 .sub2 { background-image: url('img/betfree.svg'); 
+background-size: cover;
+background-repeat: no-repeat;}
+.container5 .sub3 { background-image: url('img/swift.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center; }
+.container5 .sub4 { background-image: url('img/todo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+background-position: center;  }
 
 .container5 .sob, .sos {
     position: absolute;
     width: 100%;
     padding: 1.5rem;
     text-align: center;
-    color: white;
+    align-content: start;
+    color: rgb(0, 0, 0);
     font-size: 1.2rem;
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
 }
 
 .container5 .sob {
-    top: 30%;
+    top: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -1923,7 +1935,7 @@ font-size:2rem ;
 
 .container5 .sos a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 5rem;
     margin: 0 3rem;
     display: inline-block;
@@ -1938,8 +1950,6 @@ font-size:2rem ;
 .container5 .extra:hover .sos {
     opacity: 1;
 }
-
-
 
 footer{
 display: flex;
