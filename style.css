@@ -340,7 +340,7 @@ padding: 3rem 0;
 }
 
 .container3 .box1 h1{
-font-size: 5rem;
+font-size: 4rem;
 margin-bottom: 1rem;
 color: #01a1fdcb;
 }
@@ -494,17 +494,18 @@ height: 40rem;
 }
 
 .eng{
-font-size: 2rem;
+font-size: 1.6rem;
 color: #ffffff;
 gap: 1rem;
 }
 
 .eng h1{
-font-size: 5rem;
+font-size: 3.5rem;
 }
 
 .eng p{
 margin: 1rem 0;
+line-height: 1.5;
 }
 
 
@@ -1043,7 +1044,7 @@ padding: 3rem 0;
 }
 
 .container3 .box1 h1{
-font-size: 5rem;
+font-size: 4rem;
 color: #01a1fdcb;
 }
 
@@ -1198,17 +1199,18 @@ height: 40rem;
 }
 
 .eng{
-font-size: 2rem;
+font-size: 1.6rem;
 color: #ffffff;
 gap: 1rem;
 }
 
 .eng h1{
-font-size: 5rem;
+font-size: 3.5rem;
 }
 
 .eng p{
 margin: 1rem 0;
+line-height: 1.5;
 }
 
 
@@ -1657,7 +1659,7 @@ padding: 3rem 0;
 }
 
 .container3 .box1 h1{
-font-size: 5rem;
+font-size: 4rem;
 color: #01a1fdcb;
 }
 
@@ -1813,19 +1815,632 @@ height: 40rem;
 }
 
 .eng{
-font-size: 2rem;
+font-size: 1.6rem;
 color: #ffffff;
 gap: 1rem;
 }
 
 .eng h1{
-font-size: 5rem;
+font-size: 3.5rem;
 }
 
 .eng p{
 margin: 1rem 0;
+line-height: 1.5;
 }
 
+.containerover1 .eng a{
+font-size: 1.6rem;
+color: #ffffff;
+text-decoration: none;
+font-weight: 600;
+padding: 1.5rem 3rem;
+background: linear-gradient(to right, rgba(4, 4, 4, 0) 50%, #ffffff 50%);
+background-size: 200% 100%;
+border-radius: 1rem;
+background-position: right;
+color: rgb(0, 0, 0);
+transition: background-position 0.5s ease-in-out;
+}
+
+.containerover1 a:hover {
+    background-position: left;
+    color: #ffffff;
+}
+
+.containerover1 .eng i{
+padding-left: 1rem;
+}
+
+
+.container5 {
+    min-width: 100vw;
+    height: auto;
+    text-align: center;
+    padding: 50px;
+    background-image: url('img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.container5 .boxx {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+}
+
+.container5 .box h1 {
+font-size:6rem ;
+color: rgb(0, 0, 0);
+padding: 2rem 0;
+}
+
+.container5 .box p {
+font-size:2rem ;
+color: rgb(0, 0, 0);
+}
+
+
+.container5 .boxx h1 {
+font-size:4rem ;
+}
+
+.container5 .boxx p {
+font-size:2rem ;
+}
+
+
+.container5 .extra {
+    position: relative;
+    width: 50rem;
+    height: 50rem;
+    background-color: #ffffff;
+    overflow: hidden;
+    border: 1px solid rgb(139, 201, 251);
+}
+
+.container5 .sub {
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.container5 .sub1 { background-image: url('img/20250114_150826.jpg'); }
+.container5 .sub2 { background-image: url('img/betfree.svg'); 
+background-size: cover;
+background-repeat: no-repeat;}
+.container5 .sub3 { background-image: url('img/swift.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center; }
+.container5 .sub4 { background-image: url('img/todo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+background-position: center;  }
+.container5 .sub5 { background-image: url('img/uci\ health.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+background-position: center;  }
+
+.container5 .sob, .sos {
+    position: absolute;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    align-content: start;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.container5 .sob {
+    top: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container5 .sos {
+    bottom: 1rem;
+}
+
+.container5 .sos a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 5rem;
+    margin: 0 3rem;
+    display: inline-block;
+}
+
+/* Hide background image & show text on hover */
+.container5 .extra:hover .sub {
+    opacity: 0;
+}
+
+.container5 .extra:hover .sob,
+.container5 .extra:hover .sos {
+    opacity: 1;
+}
+
+footer{
+display: flex;
+justify-content: center;
+align-items: center;
+min-width: 100vw;
+min-height: 10vh;
+}
+
+footer .fa{
+color: white;
+font-size: 3rem;
+margin: 2rem;
+}
+
+footer .fa:hover{
+color: rgb(75, 188, 249);
+}}
+
+@media(max-width:320px){
+    *{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+overflow-x: hidden;
+background-color: rgb(15, 29, 45);
+}
+
+html{
+font-size: 50%;
+scroll-behavior: smooth;
+}
+
+#floating-navbar {
+display: none;
+}
+
+.bar{
+display: none;
+}
+
+.container1{
+display: flex;
+justify-content: center;
+flex-direction: column;
+background-image: url('img/background.jpg');
+background-size:cover;
+background-position: center;
+background-repeat: no-repeat;
+min-width: 100vw;
+min-height: auto;
+}
+
+.container1 .box{
+width: 40rem;
+height: 40rem;
+align-content: center;
+}
+
+.myname{
+width: 100%;
+height: 10rem;
+font-size: 2rem;
+padding-left: 5rem;
+align-content: end;
+color: #ffffff;
+}
+
+
+
+.container1 .override{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column-reverse;
+width: 100%;
+height: auto;
+}
+
+.box .inside1{
+font-size: 4rem;
+color: aliceblue;
+}
+
+.box .inside2{
+font-size: 1.6rem;
+color: aliceblue;
+margin-top: 2rem;
+}
+
+.box .inside2 a{
+text-decoration: none;
+color:#ffffffcb;
+font-size: 2.5rem;
+padding-left: 1rem;
+}
+
+.inside3 a:hover{
+color: #01a1fdcb;
+}
+
+.hire {
+    display: inline-block;
+    color: white;
+    border-radius: 50%;
+    transition: 0.3s ease, transform 0.3s ease;
+}
+
+.hire:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Change icon on hover */
+.hire:hover #email-icon {
+    content: "\f2b5"; /* Unicode for fa-handshake-o */
+    font-family: "FontAwesome";
+}
+
+/* Initial hidden state */
+.myname, .box1, .box2 {
+    opacity: 0;
+    transform: translateX(-50px); /* Start slightly to the left */
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Box2 starts from the right */
+.box2 {
+    transform: translateX(50px);
+}
+
+/* When visible, slide to normal position */
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 6rem;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+}
+
+/* Initially visible */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.container1 .box2{
+background-image: url("img/my\ photo.jpg");
+background-position: center;
+background-size: cover;
+border-radius: 10rem;
+}
+
+.container2{
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-direction: column;
+background-color: rgba(35, 103, 155, 0.637);
+min-width: 100vw;
+min-height: auto;
+margin-top: 3rem;
+padding: 2rem 0;
+}
+
+
+.container2 .exp{
+width: 70%;
+font-size: 1.5rem;
+line-height: 1.5;
+color: rgba(255, 255, 255, 0.632);
+}
+
+.exp {
+    display: none; /* Hide details by default */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.exp.show {
+    display: block;
+    max-height: 500px; /* Adjust as needed */
+    padding: 10px 0;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: linear-gradient(to right, rgba(4, 4, 4, 0) 50%, #ffffffc8 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    color: white;
+    padding: 0.5rem 3rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin: auto;
+    transition: background-position 0.5s ease-in-out;
+}
+
+.about:hover {
+    background-position: right;
+    color: #000000;
+}
+/* Icon transition */
+.about i {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Initially hidden content */
+#about-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* Expanded state */
+#about-content.show {
+    max-height: 1000px; /* A temporary max height */
+    opacity: 1;
+}
+
+
+@keyframes fadeArrow {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fading-arrow {
+    animation: fadeArrow 1.5s infinite ease-in-out;
+}
+
+
+/* Initially hide elements */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px); /* Start position */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Slide in from different directions */
+.slide-left {
+    transform: translateX(-50px);
+}
+
+.slide-right {
+    transform: translateX(50px);
+}
+
+.fade-in {
+    transform: translateY(50px);
+}
+
+/* Show animation */
+.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.container3{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+min-width: 100vw;
+min-height: auto;
+padding: 3rem 0;
+}
+
+.container3 .box1 h1{
+font-size: 4rem;
+color: #01a1fdcb;
+}
+
+.container3 .box1 p{
+font-size: 2rem;
+color: #ffffffcb;
+}
+
+
+.container3 .box{
+width: 100%;
+height: 10rem;
+text-align: center;
+}
+
+.container3 .box2{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+width: 30rem;
+height: auto;
+flex-wrap: wrap;
+gap: 3rem;
+}
+
+.container3 .icon{
+background-position: center;
+background-size: cover;
+width: 10rem;
+height: 10rem;
+border-radius: 2rem;
+}
+
+.container3 .icon1{
+background-image: url('img/html.jpg');
+}
+
+.container3 .icon2{
+background-image: url('img/css.jpg');
+}
+
+
+.container3 .icon3{
+background-image: url('img/js.jpg');
+}
+
+.container3 .icon4{
+background-image: url('img/git.jpg');
+}
+
+
+.container3 .icon5{
+background-image: url('img/github.jpg');
+}
+
+
+.container4{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgba(35, 103, 155, 0.637);
+min-width: 100vw;
+min-height:auto;
+}
+
+.container4 .dot{
+display: flex;
+justify-content: right;
+align-items: center;
+width: 100%;
+height: 40rem;
+padding: 5rem;
+}
+
+.container4 .dot{
+background-image: url('img/—Pngtree—abstract\ dot\ white\ polka\ dot_8796915.png');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.container4 .eng{
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+width:50rem;
+height: 40rem;
+}
+
+
+.containerover{
+display: flex;
+justify-content: space-between;
+align-items: center;
+min-width: 100vw;
+min-height:auto;
+}
+
+.containerover .dot{
+display: flex;
+justify-content: left;
+align-items: center;
+width: 100%;
+height: auto;
+padding: 5rem;
+}
+
+.containerover .eng{
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+width:50rem;
+height: auto;
+}
+
+
+
+.containerover1{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgba(35, 103, 155, 0.637);
+min-width: 100vw;
+min-height:auto;
+}
+
+.containerover1 .dot{
+display: flex;
+justify-content: right;
+align-items: center;
+width: 100%;
+height: 40rem;
+padding: 5rem;
+}
+
+.containerover1 .dot{
+background-image: url('img/—Pngtree—abstract\ dot\ white\ polka\ dot_8796915.png');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.containerover1 .eng{
+display: flex;
+justify-content: center;
+align-items: start;
+flex-direction: column;
+width:40rem;
+height: 40rem;
+}
+
+.eng{
+font-size: 1.6rem;
+color: #ffffff;
+gap: 1rem;
+}
+
+.eng h1{
+font-size: 3.5rem;
+}
+
+.eng p{
+margin: 1rem 0;
+line-height: 1.5;
+}
 
 .containerover1 .eng a{
 font-size: 1.6rem;
