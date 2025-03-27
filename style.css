@@ -566,7 +566,7 @@ padding-left: 1rem;
 }
 
 .container5 .box h1 {
-font-size:6rem ;
+font-size:3rem ;
 color: rgb(255, 255, 255);
 padding: 2rem 0;
 }
@@ -574,15 +574,6 @@ padding: 2rem 0;
 .container5 .box p {
 font-size:2rem ;
 color: rgb(255, 255, 255);
-}
-
-
-.container5 .boxx h1 {
-font-size:4rem ;
-}
-
-.container5 .boxx p {
-font-size:2rem ;
 }
 
 
@@ -604,21 +595,23 @@ font-size:2rem ;
     transition: opacity 0.3s ease-in-out;
 }
 
-.container5 .sub1 { background-image: url('img/20250114_150826.jpg'); }
+.container5 .sub1 { background-image: url('img/guessnumber.jpg'); 
+    background-size: contain;
+    background-repeat: no-repeat;}
 .container5 .sub2 { background-image: url('img/betfree.png'); 
-background-size: cover;
+background-size: contain;
 background-repeat: no-repeat;}
 .container5 .sub3 { background-image: url('img/WhiteLogo.svg');
     background-size: contain;
     background-repeat: no-repeat;
 background-position: center; }
-.container5 .sub4 { background-image: url('img/todo.jpg');
+.container5 .sub4 { background-image: url('img/todo.png');
     background-size: cover;
     background-repeat: no-repeat;
 background-position: center;  }
 
-.container5 .sub5 { background-image: url('img/uci\ health.jpg');
-    background-size: cover;
+.container5 .sub5 { background-image: url('img/ucilogowhite.png');
+    background-size: contain;
     background-repeat: no-repeat;
 background-position: center;  }
 
@@ -1271,31 +1264,21 @@ padding-left: 1rem;
 }
 
 .container5 .box h1 {
-font-size:6rem ;
-color: rgb(0, 0, 0);
+font-size:3rem ;
+color: rgb(255, 255, 255);
 padding: 2rem 0;
 }
 
 .container5 .box p {
-font-size:2rem ;
-color: rgb(0, 0, 0);
+font-size:1.8rem ;
+color: rgb(255, 255, 255);
 }
-
-
-.container5 .boxx h1 {
-font-size:4rem ;
-}
-
-.container5 .boxx p {
-font-size:2rem ;
-}
-
 
 .container5 .extra {
     position: relative;
     width: 50rem;
     height: 50rem;
-    background-color: #ffffff;
+    background-color: #000000;
     overflow: hidden;
     border: 1px solid rgb(139, 201, 251);
 }
@@ -1309,20 +1292,24 @@ font-size:2rem ;
     transition: opacity 0.3s ease-in-out;
 }
 
-.container5 .sub1 { background-image: url('img/20250114_150826.jpg'); }
-.container5 .sub2 { background-image: url('img/betfree.svg'); 
-background-size: cover;
-background-repeat: no-repeat;}
-.container5 .sub3 { background-image: url('img/swift.svg');
+.container5 .sub1 { background-image: url('img/guessnumber.jpg');
     background-size: contain;
     background-repeat: no-repeat;
 background-position: center; }
-.container5 .sub4 { background-image: url('img/todo.jpg');
-    background-size: cover;
+.container5 .sub2 { background-image: url('img/betfree.png'); 
+background-size: contain;
+background-repeat: no-repeat;}
+.container5 .sub3 { background-image: url('img/WhiteLogo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center; }
+.container5 .sub4 { background-image: url('img/todo.png');
+    background-size: contain;
     background-repeat: no-repeat;
 background-position: center;  }
-.container5 .sub5 { background-image: url('img/uci\ health.jpg');
-    background-size: cover;
+
+.container5 .sub5 { background-image: url('img/ucilogowhite.png');
+    background-size: contain;
     background-repeat: no-repeat;
 background-position: center;  }
 
@@ -1339,7 +1326,7 @@ background-position: center;  }
 }
 
 .container5 .sob {
-    top: 50px;
+    top: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -1349,7 +1336,7 @@ background-position: center;  }
 
 .container5 .sos a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 5rem;
     margin: 0 3rem;
     display: inline-block;
@@ -1886,31 +1873,23 @@ padding-left: 1rem;
 }
 
 .container5 .box h1 {
-font-size:6rem ;
-color: rgb(0, 0, 0);
+font-size:3rem ;
+color: rgb(255, 255, 255);
 padding: 2rem 0;
 }
 
 .container5 .box p {
-font-size:2rem ;
-color: rgb(0, 0, 0);
+font-size:1.8rem ;
+color: rgb(255, 255, 255);
 }
 
-
-.container5 .boxx h1 {
-font-size:4rem ;
-}
-
-.container5 .boxx p {
-font-size:2rem ;
-}
 
 
 .container5 .extra {
     position: relative;
     width: 50rem;
     height: 50rem;
-    background-color: #ffffff;
+    background-color: #000000;
     overflow: hidden;
     border: 1px solid rgb(139, 201, 251);
 }
@@ -1924,20 +1903,24 @@ font-size:2rem ;
     transition: opacity 0.3s ease-in-out;
 }
 
-.container5 .sub1 { background-image: url('img/20250114_150826.jpg'); }
-.container5 .sub2 { background-image: url('img/betfree.svg'); 
-background-size: cover;
-background-repeat: no-repeat;}
-.container5 .sub3 { background-image: url('img/swift.svg');
+.container5 .sub1 { background-image: url('img/guessnumber.jpg');
     background-size: contain;
     background-repeat: no-repeat;
 background-position: center; }
-.container5 .sub4 { background-image: url('img/todo.jpg');
-    background-size: cover;
+.container5 .sub2 { background-image: url('img/betfree.png'); 
+background-size: contain;
+background-repeat: no-repeat;}
+.container5 .sub3 { background-image: url('img/WhiteLogo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center; }
+.container5 .sub4 { background-image: url('img/todo.png');
+    background-size: contain;
     background-repeat: no-repeat;
 background-position: center;  }
-.container5 .sub5 { background-image: url('img/uci\ health.jpg');
-    background-size: cover;
+
+.container5 .sub5 { background-image: url('img/ucilogowhite.png');
+    background-size: contain;
     background-repeat: no-repeat;
 background-position: center;  }
 
@@ -1954,7 +1937,7 @@ background-position: center;  }
 }
 
 .container5 .sob {
-    top: 50px;
+    top: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -1964,12 +1947,11 @@ background-position: center;  }
 
 .container5 .sos a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 5rem;
     margin: 0 3rem;
     display: inline-block;
 }
-
 /* Hide background image & show text on hover */
 .container5 .extra:hover .sub {
     opacity: 0;
@@ -2499,31 +2481,23 @@ padding-left: 1rem;
 }
 
 .container5 .box h1 {
-font-size:6rem ;
-color: rgb(0, 0, 0);
+font-size:3rem ;
+color: rgb(255, 255, 255);
 padding: 2rem 0;
 }
 
 .container5 .box p {
-font-size:2rem ;
-color: rgb(0, 0, 0);
+font-size:1.8rem ;
+color: rgb(255, 255, 255);
 }
 
-
-.container5 .boxx h1 {
-font-size:4rem ;
-}
-
-.container5 .boxx p {
-font-size:2rem ;
-}
 
 
 .container5 .extra {
     position: relative;
     width: 50rem;
     height: 50rem;
-    background-color: #ffffff;
+    background-color: #000000;
     overflow: hidden;
     border: 1px solid rgb(139, 201, 251);
 }
@@ -2537,20 +2511,24 @@ font-size:2rem ;
     transition: opacity 0.3s ease-in-out;
 }
 
-.container5 .sub1 { background-image: url('img/20250114_150826.jpg'); }
-.container5 .sub2 { background-image: url('img/betfree.svg'); 
-background-size: cover;
-background-repeat: no-repeat;}
-.container5 .sub3 { background-image: url('img/swift.svg');
+.container5 .sub1 { background-image: url('img/guessnumber.jpg');
     background-size: contain;
     background-repeat: no-repeat;
 background-position: center; }
-.container5 .sub4 { background-image: url('img/todo.jpg');
-    background-size: cover;
+.container5 .sub2 { background-image: url('img/betfree.png'); 
+background-size: contain;
+background-repeat: no-repeat;}
+.container5 .sub3 { background-image: url('img/WhiteLogo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center; }
+.container5 .sub4 { background-image: url('img/todo.png');
+    background-size: contain;
     background-repeat: no-repeat;
 background-position: center;  }
-.container5 .sub5 { background-image: url('img/uci\ health.jpg');
-    background-size: cover;
+
+.container5 .sub5 { background-image: url('img/ucilogowhite.png');
+    background-size: contain;
     background-repeat: no-repeat;
 background-position: center;  }
 
@@ -2567,7 +2545,7 @@ background-position: center;  }
 }
 
 .container5 .sob {
-    top: 50px;
+    top: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -2577,7 +2555,7 @@ background-position: center;  }
 
 .container5 .sos a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 5rem;
     margin: 0 3rem;
     display: inline-block;
