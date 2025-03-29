@@ -615,6 +615,12 @@ background-position: center;  }
     background-repeat: no-repeat;
 background-position: center;  }
 
+.container5 .sub6 { background-image: url('img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center;  }
+
+
 .container5 .sob, .sos {
     position: absolute;
     width: 100%;
@@ -1272,7 +1278,7 @@ padding: 2rem 0;
 .container5 .box p {
 font-size:1.8rem ;
 color: rgb(255, 255, 255);
-}
+}git st
 
 .container5 .extra {
     position: relative;
