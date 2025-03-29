@@ -1319,6 +1319,12 @@ background-position: center;  }
     background-repeat: no-repeat;
 background-position: center;  }
 
+.container5 .sub6 { background-image: url('img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center;  }
+
+
 .container5 .sob, .sos {
     position: absolute;
     width: 100%;
@@ -1930,6 +1936,12 @@ background-position: center;  }
     background-repeat: no-repeat;
 background-position: center;  }
 
+.container5 .sub6 { background-image: url('img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center;  }
+
+
 .container5 .sob, .sos {
     position: absolute;
     width: 100%;
@@ -2537,6 +2549,12 @@ background-position: center;  }
     background-size: contain;
     background-repeat: no-repeat;
 background-position: center;  }
+
+.container5 .sub6 { background-image: url('img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center;  }
+
 
 .container5 .sob, .sos {
     position: absolute;
