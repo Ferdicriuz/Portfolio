@@ -620,6 +620,11 @@ background-position: center;  }
     background-repeat: no-repeat;
 background-position: center;  }
 
+.container5 .sub7 { background-image: url('img/HASAL-LOGO-1-1536x508.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center;  }
+
 
 .container5 .sob, .sos {
     position: absolute;
@@ -1324,6 +1329,11 @@ background-position: center;  }
     background-repeat: no-repeat;
 background-position: center;  }
 
+.container5 .sub7 { background-image: url('img/HASAL-LOGO-1-1536x508.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center;  }
+
 
 .container5 .sob, .sos {
     position: absolute;
@@ -1937,6 +1947,11 @@ background-position: center;  }
 background-position: center;  }
 
 .container5 .sub6 { background-image: url('img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+background-position: center;  }
+
+.container5 .sub7 { background-image: url('img/HASAL-LOGO-1-1536x508.jpg');
     background-size: contain;
     background-repeat: no-repeat;
 background-position: center;  }
