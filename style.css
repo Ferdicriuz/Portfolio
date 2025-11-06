@@ -596,37 +596,37 @@ color: rgb(255, 255, 255);
 }
 
 .container5 .sub1 { background-image: url('img/guessnumber.jpg'); 
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;}
 .container5 .sub2 { background-image: url('img/betfree.png'); 
-background-size: contain;
+background-size: 100%;
 background-repeat: no-repeat;}
 .container5 .sub3 { background-image: url('img/WhiteLogo.svg');
     background-size: contain;
     background-repeat: no-repeat;
 background-position: center; }
 .container5 .sub4 { background-image: url('img/todo.png');
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 background-position: center;  }
 
 .container5 .sub5 { background-image: url('img/ucilogowhite.png');
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
 background-position: center;  }
 
 .container5 .sub6 { background-image: url('img/logo.png');
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
 background-position: center;  }
 
 .container5 .sub7 { background-image: url('img/HASAL-LOGO-1-1536x508.jpg');
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
 background-position: center;  }
 
 .container5 .sub8 { background-image: url('img/WhatsApp\ Image\ 2025-10-23\ at\ 03.30.14_f75b7695.jpg');
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
 background-position: center;  }
 
