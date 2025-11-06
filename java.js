@@ -7,7 +7,9 @@ menuLinks.classList.toggle("show");
 icon.classList.toggle("fa-user-times");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (event) {
+      event.preventDefault(); 
+      
     const menuButton = document.querySelector(".menu-icon");
     const closeButton = document.querySelector("#close-navbar");
     const menuOverlay = document.querySelector(".overlay");
