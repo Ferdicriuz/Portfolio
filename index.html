@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Derek | Frontend Engineer</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://kit.fontawesome.com/7a4b62b0a4.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="nav">
+
+  <h2 class="logo">Derek.</h2>
+
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+        <button id="theme-toggle" class="muun"><i class="fa-solid fa-moon"></i></button>
+
+  <!-- Mobile menu / toggled panel -->
+  <div class="mobile-menu">
+
+    <div class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="mobile-panel">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    <!-- Close button -->
+    <div class="close-btn">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+      <div class="mobile-actions">
+        <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+
+    </div>
+  </div>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+<div class="hero-text">
+
+<h1>
+Frontend Engineer
+</h1>
+
+<h2>
+<span id="typing"></span>
+</h2>
+
+<p>
+I design and build high-performance web interfaces using modern JavaScript technologies.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="btn">View Work</a>
+<a href="#" class="btn-outline">Download CV</a>
+
+</div>
+
+<div class="socials">
+
+<a href="#"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+
+</div>
+
+</div>
+
+<img src="assets/profile.png" class="hero-img">
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="section fade">
+
+<h2 class="section-title">Projects</h2>
+
+<div id="repos" class="project-grid"></div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="section fade">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">React</div>
+<div class="skill">Node</div>
+<div class="skill">Git</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="section fade">
+
+<h2 class="section-title">Contact</h2>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<button class="btn">Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2025 Derek — Frontend Engineer</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
