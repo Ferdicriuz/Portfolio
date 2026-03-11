@@ -173,29 +173,56 @@ const username = "ferdicriuz"
 
 try{
 
-const res = await fetch(
-`https://api.github.com/users/${username}/repos?sort=updated`
-)
+const projects = [
+{
+name: "HOMA REST",
+description: "HomaGrills Restaurant Website is a responsive restaurant web application built to showcase menu offerings, featured meals, and restaurant services. The project focuses on clean UI design, mobile responsiveness, and smooth user navigation using modern frontend technologies.",
+github: "https://github.com/ferdicriuz/homarest",
+live: "https://homagrills.vercel.app/"
+},
 
-const repos = await res.json()
+{
+name: "SWIFT",
+description: "Swift is a modern e-commerce web application that demonstrates product catalog browsing, responsive design, and interactive user interface elements. The project focuses on clean UI, performance, and mobile-friendly design to simulate a real online shopping platform.",
+github: "https://github.com/yourusername/swift",
+live: "https://swift-seven-lake.vercel.app/"
+},
 
-repos.slice(0,6).forEach(repo => {
+{
+name: "MY-GUESSING-GAME",
+description: "A fun interactive guessing game where users try to guess a randomly generated number. Features dynamic feedback, scoring, and responsive design for an engaging experience on desktop and mobile devices.git add .",
+github: "https://github.com/yourusername/MY-GUESSING-GAME",
+live: "https://vercel.com/ferdicriuzs-projects/my-guessing-game/4gwf9miRU3fnFoYZDhS8BU6QTKmE"
+},
+
+{
+name: "Chat App",
+description: "Real-time chat application built with Socket.io, Node.js and modern UI.",
+github: "https://github.com/yourusername/chat-app",
+live: "https://chat-app.vercel.app"
+}
+]
+
+const container = document.getElementById("repos")
+
+projects.forEach(project => {
 
 const div = document.createElement("div")
 
 div.className = "project"
 
 div.innerHTML = `
-<h2>${repo.name}</h2>
-<p >${repo.description || "No description available"}</p>
+<h3>${project.name}</h3>
+<p>${project.description}</p>
 
 <div class="project-links">
-  <a href="${repo.html_url}" target="_blank" title="View Code">
-    <i class="fab fa-github"></i>
-  </a>
-  ${repo.homepage ? `<a href="${liveUrls[repo.name] || '#'}" target="_blank" title="Live Site">
-  <i class="fas fa-globe"></i>
-</a>` : ""}
+<a href="${project.github}" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="${project.live}" target="_blank">
+<i class="fas fa-globe"></i>
+</a>
 </div>
 `
 
