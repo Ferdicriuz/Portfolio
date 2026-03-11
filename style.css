@@ -50,7 +50,7 @@ gap:20px;
 align-items:center;
 }
 
-.menu-btn{
+.menu-btn, .socialz{
 display:none;
 cursor:pointer;
 }
@@ -164,6 +164,7 @@ cursor:pointer;
 
 .hero{
 display:flex;
+height: auto;
 align-items:center;
 justify-content:space-between;
 padding:120px 10%;
@@ -243,27 +244,7 @@ border-color: var(--accent);
   color: rgb(255, 239, 120);  /* sun is white */
 }
 
-.project-links{
-  margin-top: 15px;
-  display: flex;
-  gap: 15px;
-}
 
-.project-links a{
-  font-size: 22px;
-  color: var(--text);
-  transition: 0.3s;
-}
-
-.project-links a:hover{
-  color: var(--accent);
-  transform: translateY(-3px);
-}
-
-/* Dark mode icons */
-.dark .project-links a{
-  color: white;
-}
 .hero-img{
 width:280px;
 border-radius:20px;
@@ -292,6 +273,28 @@ transition:.3s;
 
 .project:hover{
 transform:translateY(-8px);
+}
+
+.project-links{
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.project-links a{
+  font-size: 22px;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.project-links a:hover{
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* Dark mode icons */
+.dark .project-links a{
+  color: white;
 }
 
 /* SKILLS */
@@ -369,4 +372,38 @@ ul{
 list-style: none;
 }
 
+.socials{
+display: none;
+}
+
+.socialz{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 20rem;
+}
+
+/* Default social icons */
+.socialz a i {
+  color: var(--text);
+  transition: 0.3s;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+/* Dark mode */
+.dark .socialz a i {
+  color: white;
+}
+
+/* Hover */
+.socialz a:hover i {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.hero-img{
+width:90%;
+border-radius:20px;
+}
 }
