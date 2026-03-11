@@ -268,11 +268,18 @@ fadeElements.forEach(el => observer.observe(el))
 
 }
 
-const liveUrls = {
-  "chat-app": "https://chat-app.vercel.app",
-  "task-manager": "https://task-manager.vercel.app",
-  "finance-tracker": "https://finance-tracker.vercel.app"
-}
 
 
+const contactForm = document.getElementById("contact-form");
 
+contactForm.addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent page reload
+
+  emailjs.sendForm("service_hd0j2mm", "template_bff3q0s", this)
+    .then(() => {
+      alert("Message sent successfully! 🚀");
+      contactForm.reset();
+    }, (error) => {
+      alert("Oops! Something went wrong.", error);
+    });
+});
