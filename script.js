@@ -61,33 +61,39 @@ closeBtn.onclick = () => {
 mobilePanel.querySelectorAll("a").forEach(link => {
   link.onclick = () => mobilePanel.classList.remove("open")
 })
+// ========================
+// DARK MODE TOGGLE
+// ========================
 
-// Dark mode toggle inside mobile panel
-const toggle = document.getElementById("theme-toggle")
-const icon = toggle.querySelector("i")
+const toggles = document.querySelectorAll(".theme-toggle")
 
-toggle.onclick = () => {
-  document.body.classList.toggle("dark")
-  localStorage.setItem("theme", document.body.classList.contains("dark"))
+toggles.forEach(toggle => {
 
-  if(document.body.classList.contains("dark")){
-    icon.classList.replace("fa-moon","fa-sun")
-    icon.style.color = "white"
-  } else {
-    icon.classList.replace("fa-sun","fa-moon")
-    icon.style.color = "black"
+  const icon = toggle.querySelector("i")
+
+  toggle.onclick = () => {
+
+    document.body.classList.toggle("dark")
+
+    const darkMode = document.body.classList.contains("dark")
+
+    localStorage.setItem("theme", darkMode)
+
+    icon.classList.toggle("fa-moon", !darkMode)
+    icon.classList.toggle("fa-sun", darkMode)
+
   }
-}
+
+})
 
 // Load saved theme
 if(localStorage.getItem("theme") === "true"){
   document.body.classList.add("dark")
-  icon.classList.replace("fa-moon","fa-sun")
-  icon.style.color = "white"
-} else {
-  icon.style.color = "black"
-}
 
+  document.querySelectorAll(".theme-toggle i").forEach(icon=>{
+    icon.classList.replace("fa-moon","fa-sun")
+  })
+}
 
 // ========================
 // TYPING ANIMATION
@@ -180,8 +186,8 @@ const div = document.createElement("div")
 div.className = "project"
 
 div.innerHTML = `
-<h3>${repo.name}</h3>
-<p>${repo.description || "No description available"}</p>
+<h2>${repo.name}</h2>
+<p >${repo.description || "No description available"}</p>
 
 <div class="project-links">
   <a href="${repo.html_url}" target="_blank" title="View Code">
