@@ -22,12 +22,14 @@ body{
 background:var(--bg);
 color:var(--text);
 transition: background 0.3s, color 0.3s;
+overflow-x: hidden;
 }
 
 html{
 font-size: 65.2%;
 }
 /* NAV */
+
 
 .nav{
 display:flex;
@@ -159,8 +161,9 @@ cursor:pointer;
 .hero{
 display:flex;
 height: auto;
+min-width: 100vw;
 align-items:center;
-justify-content:space-between;
+justify-content:space-around;
 padding:5rem 10%;
 }
 
@@ -194,7 +197,7 @@ margin-bottom: 1rem;
 .btn{
 background:var(--accent);
 color:white;
-padding:1rem 2rem;
+padding:1rem 3rem;
 border-radius:8px;
 text-decoration:none;
 border:none;
@@ -361,13 +364,84 @@ transform:translateY(0);
 @media(max-width:900px){
 
 .hero{
+justify-content: space-around;
+align-items: center;
 flex-direction:column;
 text-align:center;
+width: 100vw;
+border: 1px solid red;
 gap:40px;
 }
 
 .nav-links, .muun{
 display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+ul{
+list-style: none;
+}
+
+.socials{
+display: none;
+}
+
+.socialz{
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+/* Default social icons */
+.socialz a i {
+  color: var(--text);
+  transition: 0.3s;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+/* Dark mode */
+.dark .socialz a i {
+  color: white;
+}
+
+/* Hover */
+.socialz a:hover i {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.hero-img{
+width:100%;
+border-radius:20px;
+}
+}
+
+@media(max-width:450px){
+
+.hero{
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+text-align:center;
+width: 100vw;
+border: 1px solid red;
+gap:40px;
+}
+
+.nav-links, .muun{
+display:none;
+}
+.hero-buttons{
+width: 60rem;
+}
+
+.btn, .btn-outline{
+padding: 1rem 3rem;
 }
 
 .menu-btn{
