@@ -1,3 +1,5 @@
+
+
 // ========================
 // SMOOTH SCROLL
 // ========================
@@ -196,7 +198,7 @@ live: "https://vercel.com/ferdicriuzs-projects/my-guessing-game/4gwf9miRU3fnFoYZ
 },
 
 {
-name: "Chat App",
+name: "CHAT APP",
 description: "Real-time chat application built with Socket.io, Node.js and modern UI.",
 github: "https://github.com/yourusername/chat-app",
 live: "https://chat-app.vercel.app"
@@ -212,10 +214,11 @@ const div = document.createElement("div")
 div.className = "project"
 
 div.innerHTML = `
-<h3>${project.name}</h3>
+<h2 style="margin:1rem">${project.name}</h2>
 <p>${project.description}</p>
 
 <div class="project-links">
+<div class="picon">
 <a href="${project.github}" target="_blank">
 <i class="fab fa-github"></i>
 </a>
@@ -223,6 +226,7 @@ div.innerHTML = `
 <a href="${project.live}" target="_blank">
 <i class="fas fa-globe"></i>
 </a>
+</div>
 </div>
 `
 
@@ -270,16 +274,26 @@ fadeElements.forEach(el => observer.observe(el))
 
 
 
+(function(){
+  emailjs.init("RDAMw8e7fS7jQRt0P");
+})();
 const contactForm = document.getElementById("contact-form");
 
 contactForm.addEventListener("submit", function(e) {
-  e.preventDefault(); // Prevent page reload
+  e.preventDefault();
 
-  emailjs.sendForm("service_hd0j2mm", "template_bff3q0s", this)
-    .then(() => {
-      alert("Message sent successfully! 🚀");
+  emailjs.sendForm(
+    "service_hd0j2mm",
+    "template_bff3q0s",
+    this,
+    "RDAMw8e7fS7jQRt0P"
+  )
+    .then(function() {
+      alert("Message sent successfully 🚀");
       contactForm.reset();
-    }, (error) => {
-      alert("Oops! Something went wrong.", error);
+    })
+    .catch(function(error) {
+      console.log(error);
+      alert("Failed to send message");
     });
 });
