@@ -30,17 +30,17 @@ behavior: "smooth"
 // DOWNLOAD BUTTON
 // ========================
 
-const downloadBtn = document.getElementById("download")
+// const downloadBtn = document.getElementById("download")
 
-if(downloadBtn){
+// if(downloadBtn){
 
-downloadBtn.onclick = () => {
+// downloadBtn.onclick = () => {
 
-alert("CV download coming soon 🚀")
+// alert("CV download coming soon 🚀")
 
-}
+// }
 
-}
+// }
 
 
 
