@@ -194,7 +194,7 @@ live: "https://swift-seven-lake.vercel.app/"
 name: "MY-GUESSING-GAME",
 description: "A fun interactive guessing game where users try to guess a randomly generated number. Features dynamic feedback, scoring, and responsive design for an engaging experience on desktop and mobile devices.git add .",
 github: "https://github.com/yourusername/MY-GUESSING-GAME",
-live: "https://vercel.com/ferdicriuzs-projects/my-guessing-game/4gwf9miRU3fnFoYZDhS8BU6QTKmE"
+live: "https://my-guessing-game-beta.vercel.app/"
 },
 
 {
