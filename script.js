@@ -202,6 +202,13 @@ name: "CHAT APP",
 description: "Real-time chat application built with Socket.io, Node.js and modern UI.",
 github: "https://github.com/yourusername/chat-app",
 live: "https://chat-app.vercel.app"
+},
+
+{
+name: "MY TODO APP",
+description: "A simple and responsive Todo application built with React that allows users to add, complete, and delete tasks. Designed with a clean UI and smooth user experience.",
+github: "https://github.com/yourusername/My-Todo-App",
+live: "https://todo-app-five-rust-92.vercel.app/"
 }
 ]
 
