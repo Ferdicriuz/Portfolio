@@ -207,8 +207,15 @@ live: "https://chat-app.vercel.app"
 {
 name: "MY TODO APP",
 description: "A simple and responsive Todo application built with React that allows users to add, complete, and delete tasks. Designed with a clean UI and smooth user experience.",
-github: "https://github.com/yourusername/My-Todo-App",
+github: "https://github.com/ferdicriuz/My-Todo-App",
 live: "https://todo-app-five-rust-92.vercel.app/"
+},
+
+{
+name: "APP PLAYER",
+description: "A simple and responsive entertainment application built with javascript that allows users to enjoy an unforgettable moment.",
+github: "https://github.com/Ferdicriuz/App-Player",
+live: "https://app-player-seven.vercel.app/"
 }
 ]
 
