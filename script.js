@@ -288,26 +288,23 @@ fadeElements.forEach(el => observer.observe(el))
 
 
 
-(function(){
-  emailjs.init("RDAMw8e7fS7jQRt0P");
+
+
+(function () {
+  emailjs.init("RDAMw8e7fS7jQRt0P"); // from EmailJS
 })();
-const contactForm = document.getElementById("contact-form");
 
-contactForm.addEventListener("submit", function(e) {
-  e.preventDefault();
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  emailjs.sendForm(
-    "service_hd0j2mm",
-    "template_bff3q0s",
-    this,
-    "RDAMw8e7fS7jQRt0P"
-  )
-    .then(function() {
-      alert("Message sent successfully 🚀");
-      contactForm.reset();
-    })
-    .catch(function(error) {
-      console.log(error);
-      alert("Failed to send message");
-    });
-});
+    emailjs.sendForm("service_hd0j2mm", "template_bff3q0s", this)
+      .then(() => {
+        alert("Message sent successfully!");
+      })
+      .catch((error) => {
+        alert("Failed to send message");
+        console.log(error);
+      });
+  });
