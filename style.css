@@ -5,6 +5,10 @@ box-sizing:border-box;
 scroll-behavior:smooth;
 }
 
+html{
+font-size: 62.5%;
+}
+
 :root{
 --bg:#060816;
 --card:#111322;
@@ -589,6 +593,10 @@ color:var(--sub);
 }
 
 @media(max-width:992px){
+
+html{
+font-size: 55%;
+}
 
 .nav-links{
 display:none;
