@@ -636,6 +636,11 @@ align-items:flex-start;
 .skills-grid{
 grid-template-columns:1fr 1fr;
 }
+
+.react-banner{
+padding:50px 8%;
+}
+
 .react-content{
 grid-template-columns:1fr;
 text-align:center;
