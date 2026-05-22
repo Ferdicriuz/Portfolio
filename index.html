@@ -6,64 +6,103 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dehv-Ferdi</title>
+<title>Ferd.dev | Full Stack Developer</title>
+
 <link rel="stylesheet" href="style.css">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<script src="https://kit.fontawesome.com/7a4b62b0a4.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
+
+<!-- CURSOR BLUR -->
+
+<div class="cursor-blur"></div>
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu">
+
+<div class="mobile-top">
+
+<h2>Ferd.dev</h2>
+
+<button class="close-menu">
+<i class="fa-solid fa-xmark"></i>
+</button>
+
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#react">React</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#cv">CV</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="mobile-socials">
+
+<a href="https://github.com/ferdicruz">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://x.com/EneanyaFer44947">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+<a href="https://linkedin.com">
+<i class="fab fa-linkedin"></i>
+</a>
+
+</div>
+
+</div>
+
+<!-- NAVBAR -->
+
 <header>
 
-<nav class="nav">
+<nav class="navbar">
 
-  <h2 class="logo">Dehv Ferdi.</h2>
+<h2 class="logo">Dehv.Ferd</h2>
 
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-       <button class="theme-toggle muun">
-  <i class="fa-solid fa-moon"></i>
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#react">React</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#cv">CV</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="nav-actions">
+
+<button class="theme-toggle">
+<i class="fa-solid fa-moon"></i>
 </button>
 
-  <!-- Mobile menu / toggled panel -->
-  <div class="mobile-menu">
+<div class="burger">
 
-    <div class="menu-btn">
-      <i class="fa-solid fa-bars"></i>
-    </div>
+<span></span>
+<span></span>
+<span></span>
 
-    <div class="mobile-panel">
-      <div class="mobile-actions">
-        <button class="theme-toggle">
-  <i class="fa-solid fa-moon"></i>
-</button>
-
-    </div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-    <!-- Close button -->
-    <div class="close-btn">
-      <i class="fa-solid fa-xmark"></i>
-    </div>
-<div class="handles">
-  <a href="https://www.instagram.com/dehvferdi?igsh=MW40YTIwM3M0aXB4bg==">IG</a>
-  <a href="https://x.com/EneanyaFer44947?t=BZPbEbbdnNbVhjXq6aR5Kg&s=09">X</a>
-  <a href="https://www.linkedin.com/in/eneanya-ferdinand-ogochukwu-99b6ba16a?utm_source=share_via&utm_content=profile&utm_medium=member_android">LN</a>
 </div>
-      
-  </div>
-  </div>
+
+</div>
 
 </nav>
 
@@ -71,76 +110,237 @@
 
 <!-- HERO -->
 
-<section id="home" class="hero">
+<section class="hero" id="home">
 
-<div class="hero-text">
+<div class="hero-content">
+
+<p class="mini-title">
+FULL STACK ENGINEER
+</p>
 
 <h1>
-Frontend Engineer
+
+Building immersive frontend experiences and scalable backend systems.
+
 </h1>
 
-<h2>
-<span id="typing"></span>
-</h2>
+<p class="hero-description">
 
-<p>
-Hi, I'm Ferdinand — a Frontend Engineer who builds modern, responsive, and high-performance web interfaces. I specialize in JavaScript, React, and creating user experiences that are fast, accessible, and visually engaging.
+I'm Ferdinand — a passionate Full Stack Developer focused on building premium modern applications using React, Node.js, MongoDB, Express, and JavaScript.
+
 </p>
 
 <div class="hero-buttons">
 
-<a href="#projects" class="btn">See Work</a>
-<a href="cv.html" class="btn-outline" id="download">View CV</a>
+<a href="#projects" class="primary-btn">
+Explore Work
+</a>
+
+<a href="#contact" class="secondary-btn">
+Hire Me
+</a>
 
 </div>
 
-<div class="socials">
+<div class="hero-tech">
 
-<a href="https://github.com/ferdicruz"><i class="fab fa-github"></i></a>
-<a href="https://x.com/EneanyaFer44947?t=BZPbEbbdnNbVhjXq6aR5Kg&s=09"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.linkedin.com/in/eneanya-ferdinand-ogochukwu-99b6ba16a?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-twitter"></i></a>
+<span>React</span>
+<span>Node.js</span>
+<span>MongoDB</span>
+<span>Express</span>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<div class="image-wrapper">
+
+<img src="assets/profile.png" alt="profile">
 
 </div>
 
 </div>
 
-<img src="assets/profile.png" class="hero-img">
-<div class="socialz">
+</section>
 
-<a href="https://github.com/ferdicruz"><i class="fab fa-github"></i></a>
-<a href="https://x.com/EneanyaFer44947?t=BZPbEbbdnNbVhjXq6aR5Kg&s=09"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.linkedin.com/in/eneanya-ferdinand-ogochukwu-99b6ba16a?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-twitter"></i></a>
+<!-- REACT SECTION -->
+
+<section class="react-banner section" id="react">
+
+<div class="react-content">
+
+<div>
+
+<p class="mini-title">REACT DEVELOPMENT</p>
+
+<h2>
+
+Building scalable frontend applications with React.
+
+</h2>
+
+<p>
+
+I create modern React applications with reusable components, API integration, authentication systems, responsive layouts, and scalable frontend architecture.
+
+</p>
 
 </div>
+
+<div class="react-icons">
+
+<i class="fa-brands fa-react"></i>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section about" id="about">
+
+<div class="section-title">
+
+<p>ABOUT</p>
+
+<h2>
+
+Building digital products with clean code and modern UI.
+
+</h2>
+
+</div>
+
+<div class="about-grid">
+
+<div class="glass-card">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>Frontend Development</h3>
+
+<p>
+
+Responsive and interactive frontend development using React and JavaScript.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<i class="fa-solid fa-server"></i>
+
+<h3>Backend Development</h3>
+
+<p>
+
+REST API architecture, authentication systems, and scalable backend logic.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<i class="fa-solid fa-database"></i>
+
+<h3>Database Design</h3>
+
+<p>
+
+MongoDB database management and backend integration.
+
+</p>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- PROJECTS -->
 
-<section id="projects" class="section fade">
+<section class="section projects" id="projects">
 
-<h2 class="section-title">Projects</h2>
+<div class="section-title">
 
-<div id="repos" class="project-grid">
+<p>PROJECTS</p>
+
+<h2>Featured Projects.</h2>
 
 </div>
+
+<div id="repos" class="projects-grid"></div>
 
 </section>
 
 <!-- SKILLS -->
 
-<section id="skills" class="section fade">
+<section class="section skills" id="skills">
 
-<h2 class="section-title">Skills</h2>
+<div class="section-title">
 
-<div class="skills">
+<p>SKILLS</p>
 
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">JavaScript</div>
-<div class="skill">React</div>
-<div class="skill">Node</div>
-<div class="skill">Git</div>
-<div class="skill">Vercel</div>
+<h2>Technologies I Use.</h2>
+
+</div>
+
+<div class="skills-grid">
+
+<div>HTML5</div>
+<div>CSS3</div>
+<div>JavaScript</div>
+<div>React</div>
+<div>Next.js</div>
+<div>Node.js</div>
+<div>Express</div>
+<div>MongoDB</div>
+<div>GitHub</div>
+<div>REST APIs</div>
+<div>Postman</div>
+<div>Vercel</div>
+
+</div>
+
+</section>
+
+<!-- CV -->
+
+<section class="section cv-section" id="cv">
+
+<div class="cv-card">
+
+<div>
+
+<p class="cv-mini">RESUME</p>
+
+<h2>Download My CV</h2>
+
+<p>
+
+View my professional experience, projects, and technical skills.
+
+</p>
+
+</div>
+
+<div class="cv-buttons">
+
+<a href="cv.html" class="view-btn">
+View CV
+</a>
+
+<a href="assets/Ferdinand-CV.pdf" download class="download-btn">
+Download CV
+</a>
+
+</div>
 
 </div>
 
@@ -148,28 +348,49 @@ Hi, I'm Ferdinand — a Frontend Engineer who builds modern, responsive, and hig
 
 <!-- CONTACT -->
 
-<section id="contact" class="section fade">
+<section class="section contact" id="contact">
 
-<h2 class="section-title">Contact</h2>
+<div class="contact-container">
 
-<form class="contact-form" id="contact-form">
+<div class="contact-text">
 
-<input type="text" name="user_name" placeholder="Your Name" required />
-  <input type="email" name="user_email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" required></textarea>
+<p>CONTACT</p>
 
-<button type="submit" class="btn">Send Message</button>
+<h2>
+
+Let's create something powerful together.
+
+</h2>
+
+</div>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">
+Send Message
+</button>
 
 </form>
+
+</div>
 
 </section>
 
 <footer>
 
-<p>© 2026 Ferdinand — Frontend Engineer </p>
+<p>
+© 2026 Ferd.dev — Full Stack Developer
+</p>
 
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script src="projects.js"></script>
 <script src="script.js"></script>
 
 </body>

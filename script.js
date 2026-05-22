@@ -1,310 +1,140 @@
+// BURGER MENU
 
+const burger = document.querySelector('.burger');
 
-// ========================
-// SMOOTH SCROLL
-// ========================
+const mobileMenu = document.querySelector('.mobile-menu');
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+const closeMenu = document.querySelector('.close-menu');
 
-link.addEventListener("click", function(e){
+burger.addEventListener('click', () => {
 
-e.preventDefault()
+mobileMenu.classList.add('show-menu');
 
-const target = document.querySelector(this.getAttribute("href"))
+});
 
-if(target){
-target.scrollIntoView({
-behavior: "smooth"
-})
-}
+closeMenu.addEventListener('click', () => {
 
-})
+mobileMenu.classList.remove('show-menu');
 
-})
+});
 
+// CLOSE MOBILE MENU
 
+const mobileLinks = document.querySelectorAll('.mobile-menu a');
 
+mobileLinks.forEach(link => {
 
+link.addEventListener('click', () => {
 
-// ========================
-// DOWNLOAD BUTTON
-// ========================
+mobileMenu.classList.remove('show-menu');
 
-// const downloadBtn = document.getElementById("download")
+});
 
-// if(downloadBtn){
+});
 
-// downloadBtn.onclick = () => {
+// THEME TOGGLE
 
-// alert("CV download coming soon 🚀")
+const themeBtn = document.querySelector('.theme-toggle');
 
-// }
+themeBtn.addEventListener('click', () => {
 
-// }
+document.body.classList.toggle('light-mode');
 
+const icon = themeBtn.querySelector('i');
 
+if(document.body.classList.contains('light-mode')){
 
-// Mobile panel elements
-const menuBtn = document.querySelector(".menu-btn")
-const mobilePanel = document.querySelector(".mobile-panel")
-const closeBtn = document.querySelector(".close-btn")
-
-// Open mobile panel
-menuBtn.onclick = () => {
-  mobilePanel.classList.add("open")
-}
-
-// Close mobile panel (close icon)
-closeBtn.onclick = () => {
-  mobilePanel.classList.remove("open")
-}
-
-// Close mobile panel when a link is clicked
-mobilePanel.querySelectorAll("a").forEach(link => {
-  link.onclick = () => mobilePanel.classList.remove("open")
-})
-// ========================
-// DARK MODE TOGGLE
-// ========================
-
-const toggles = document.querySelectorAll(".theme-toggle")
-
-toggles.forEach(toggle => {
-
-  const icon = toggle.querySelector("i")
-
-  toggle.onclick = () => {
-
-    document.body.classList.toggle("dark")
-
-    const darkMode = document.body.classList.contains("dark")
-
-    localStorage.setItem("theme", darkMode)
-
-    icon.classList.toggle("fa-moon", !darkMode)
-    icon.classList.toggle("fa-sun", darkMode)
-
-  }
-
-})
-
-// Load saved theme
-if(localStorage.getItem("theme") === "true"){
-  document.body.classList.add("dark")
-
-  document.querySelectorAll(".theme-toggle i").forEach(icon=>{
-    icon.classList.replace("fa-moon","fa-sun")
-  })
-}
-
-// ========================
-// TYPING ANIMATION
-// ========================
-
-const typing = document.getElementById("typing")
-
-if(typing){
-
-const words = [
-"React Developer",
-"JavaScript Engineer",
-"Frontend Specialist"
-]
-
-let i = 0
-let j = 0
-let current = ""
-let deleting = false
-
-function type(){
-
-current = words[i]
-
-typing.textContent = current.substring(0, j)
-
-if(!deleting){
-
-j++
-
-if(j > current.length){
-
-deleting = true
-setTimeout(type, 1000)
-return
-
-}
+icon.classList.replace('fa-moon','fa-sun');
 
 }else{
 
-j--
-
-if(j === 0){
-
-deleting = false
-i++
-
-if(i === words.length){
-i = 0
-}
+icon.classList.replace('fa-sun','fa-moon');
 
 }
 
-}
+localStorage.setItem(
+'theme',
+document.body.classList.contains('light-mode')
+? 'light'
+: 'dark'
+);
 
-setTimeout(type, 100)
+});
 
-}
+// LOAD SAVED THEME
 
-type()
+if(localStorage.getItem('theme') === 'light'){
 
-}
+document.body.classList.add('light-mode');
 
-
-
-// ========================
-// GITHUB PROJECT FETCH
-// ========================
-
-async function loadRepos(){
-
-const container = document.getElementById("repos")
-
-if(!container) return
-
-const username = "ferdicriuz"
-
-try{
-
-const projects = [
-{
-name: "HOMA REST",
-description: "HomaGrills Restaurant Website is a responsive restaurant web application built to showcase menu offerings, featured meals, and restaurant services. The project focuses on clean UI design, mobile responsiveness, and smooth user navigation using modern frontend technologies.",
-github: "https://github.com/ferdicriuz/homarest",
-live: "https://homagrills.vercel.app/"
-},
-
-{
-name: "SWIFT",
-description: "Swift is a modern e-commerce web application that demonstrates product catalog browsing, responsive design, and interactive user interface elements. The project focuses on clean UI, performance, and mobile-friendly design to simulate a real online shopping platform.",
-github: "https://github.com/yourusername/swift",
-live: "https://swift-seven-lake.vercel.app/"
-},
-
-{
-name: "MY-GUESSING-GAME",
-description: "A fun interactive guessing game where users try to guess a randomly generated number. Features dynamic feedback, scoring, and responsive design for an engaging experience on desktop and mobile devices.git add .",
-github: "https://github.com/yourusername/MY-GUESSING-GAME",
-live: "https://my-guessing-game-beta.vercel.app/"
-},
-
-{
-name: "CHAT APP",
-description: "Real-time chat application built with Socket.io, Node.js and modern UI.",
-github: "https://github.com/yourusername/chat-app",
-live: "https://chat-app.vercel.app"
-},
-
-{
-name: "MY TODO APP",
-description: "A simple and responsive Todo application built with React that allows users to add, complete, and delete tasks. Designed with a clean UI and smooth user experience.",
-github: "https://github.com/ferdicriuz/My-Todo-App",
-live: "https://todo-app-five-rust-92.vercel.app/"
-},
-
-{
-name: "APP PLAYER",
-description: "A simple and responsive entertainment application built with javascript that allows users to enjoy an unforgettable moment.",
-github: "https://github.com/Ferdicriuz/App-Player",
-live: "https://app-player-seven.vercel.app/"
-}
-]
-
-const container = document.getElementById("repos")
-
-projects.forEach(project => {
-
-const div = document.createElement("div")
-
-div.className = "project"
-
-div.innerHTML = `
-<h2 style="margin:1rem">${project.name}</h2>
-<p>${project.description}</p>
-
-<div class="project-links">
-<div class="picon">
-<a href="${project.github}" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="${project.live}" target="_blank">
-<i class="fas fa-globe"></i>
-</a>
-</div>
-</div>
-`
-
-container.appendChild(div)
-
-})
-
-}catch(err){
-
-container.innerHTML = "<p>Unable to load projects</p>"
+themeBtn
+.querySelector('i')
+.classList.replace('fa-moon','fa-sun');
 
 }
 
-}
+// CURSOR BLUR EFFECT
 
-loadRepos()
+const blur = document.querySelector('.cursor-blur');
 
+window.addEventListener('mousemove', (e) => {
 
+blur.style.left = e.clientX - 150 + 'px';
 
-// ========================
-// SCROLL REVEAL ANIMATION
-// ========================
+blur.style.top = e.clientY - 150 + 'px';
 
-const fadeElements = document.querySelectorAll(".fade")
+});
 
-if(fadeElements.length > 0){
+// REVEAL ANIMATION
 
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries)=>{
 
-entries.forEach(entry => {
+entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.target.classList.add("show")
+entry.target.style.opacity = '1';
+
+entry.target.style.transform = 'translateY(0)';
 
 }
 
-})
+});
 
-})
+},{threshold:.2});
 
-fadeElements.forEach(el => observer.observe(el))
+const sections = document.querySelectorAll('.section');
 
-}
+sections.forEach(section=>{
 
+section.style.opacity='0';
 
+section.style.transform='translateY(80px)';
 
+section.style.transition='.8s';
 
+observer.observe(section);
 
-(function () {
-  emailjs.init("RDAMw8e7fS7jQRt0P"); // from EmailJS
-})();
+});
 
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
+// CONTACT FORM
 
-    emailjs.sendForm("service_hd0j2mm", "template_bff3q0s", this)
-      .then(() => {
-        alert("Message sent successfully!");
-      })
-      .catch((error) => {
-        alert("Failed to send message");
-        console.log(error);
-      });
-  });
+const form = document.querySelector('.contact-form');
+
+form.addEventListener('submit',(e)=>{
+
+e.preventDefault();
+
+const button = form.querySelector('button');
+
+button.innerHTML = 'Sending...';
+
+setTimeout(()=>{
+
+button.innerHTML = 'Message Sent ✓';
+
+form.reset();
+
+},2000);
+
+});
