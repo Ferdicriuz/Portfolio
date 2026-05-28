@@ -138,3 +138,40 @@ form.reset();
 },2000);
 
 });
+
+const button = document.getElementById("downloadBtn");
+
+button.addEventListener("click", () => {
+
+  const cv = document.getElementById("cv-content");
+
+  html2canvas(cv).then(canvas => {
+
+    const imgData = canvas.toDataURL("image/png");
+
+    const { jsPDF } = window.jspdf;
+
+    const pdf = new jsPDF("p", "mm", "a4");
+
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+
+    const pdfHeight =
+      (canvas.height * pdfWidth) / canvas.width;
+
+    pdf.addImage(
+      imgData,
+      "PNG",
+      0,
+      0,
+      pdfWidth,
+      pdfHeight
+    );
+
+    pdf.save("Derek-CV.pdf");
+
+  });
+
+});
+
+
+

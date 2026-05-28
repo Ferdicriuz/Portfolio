@@ -37,8 +37,8 @@ transition:.4s;
 
 .cursor-blur{
 position:fixed;
-width:300px;
-height:300px;
+width:3rem;
+height:3rem;
 background:var(--primary);
 filter:blur(150px);
 opacity:.25;
@@ -68,7 +68,7 @@ font-weight:700;
 
 .nav-links{
 display:flex;
-gap:35px;
+gap:3rem;
 list-style:none;
 }
 
@@ -85,12 +85,12 @@ color:var(--primary);
 .nav-actions{
 display:flex;
 align-items:center;
-gap:20px;
+gap:2rem;
 }
 
 .theme-toggle{
-width:50px;
-height:50px;
+width:5rem;
+height:5rem;
 border:none;
 border-radius:50%;
 background:var(--card);
@@ -107,8 +107,8 @@ cursor:pointer;
 }
 
 .burger span{
-width:30px;
-height:3px;
+width:3rem;
+height:0.3rem;
 background:var(--text);
 border-radius:10px;
 }
@@ -123,6 +123,21 @@ background:var(--bg);
 padding:40px 8%;
 transition:.4s;
 z-index:200;
+}
+
+.cv-btn{
+  display:inline-block;
+  padding:12px 24px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.cv-btn:hover{
+  opacity:0.8;
 }
 
 .show-menu{
@@ -263,7 +278,7 @@ padding:120px 8%;
 .contact-text p{
 color:var(--secondary);
 letter-spacing:3px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .section-title h2,
@@ -276,7 +291,7 @@ margin-bottom:60px;
 .projects-grid,
 .skills-grid{
 display:grid;
-gap:30px;
+gap:20px;
 }
 
 .about-grid{
@@ -367,6 +382,14 @@ border-radius:50px;
 text-decoration:none;
 color:var(--text);
 border:1px solid var(--border);
+}
+
+/* LIGHT MODE GITHUB BUTTON */
+
+body.light-mode .project-links a:first-child{
+background:#e5e7eb;
+color:#111827;
+border:1px solid rgba(0,0,0,.08);
 }
 
 .cv-card{
@@ -652,5 +675,19 @@ font-size:2rem;
 
 .react-icons i{
 font-size:6rem;
+}
+
+#projects{
+height: auto;
+display:grid;
+gap:10px;
+}
+
+
+.skills{
+height: auto;
+display:grid;
+gap:10px;
+padding: 20px;
 }
 }

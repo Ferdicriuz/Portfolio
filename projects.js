@@ -29,7 +29,25 @@ live:
 
 stack: ["HTML", "CSS", "JavaScript"],
 
-gradient: "gradient-1"
+gradient: "gradient-4"
+},
+
+{
+name: "STREAMLINE",
+
+description:
+"StreamLife Daily is a modern digital news and media platform designed to deliver real-time updates across technology, entertainment, sports, business, and global trends. Built with a clean responsive interface, the platform focuses on fast content delivery, smooth user experience, category-based news browsing, and mobile-first accessibility for readers across all devices."
+,
+
+github:
+"https://github.com/Ferdicriuz/newsblog",
+
+live:
+"https://streamlinedaily.vercel.app/",
+
+stack: ["React", "CSS", "JavaScript"],
+
+gradient: "gradient-2"
 },
 
 {
@@ -46,8 +64,10 @@ live:
 
 stack: ["React", "CSS", "JavaScript"],
 
-gradient: "gradient-2"
+gradient: "gradient-1"
 },
+
+
 
 {
 name: "MY TODO APP",
