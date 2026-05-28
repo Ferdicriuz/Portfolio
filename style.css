@@ -690,4 +690,15 @@ display:grid;
 gap:10px;
 padding: 20px;
 }
+
+.section-title h2,
+.contact-text h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.section{
+padding:50px 8%;
+}
+
 }
