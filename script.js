@@ -139,39 +139,23 @@ form.reset();
 
 });
 
-const button = document.getElementById("downloadBtn");
+const downloadBtn =
+document.querySelector('.download-btn');
 
-button.addEventListener("click", () => {
+if(downloadBtn){
 
-  const cv = document.getElementById("cv-content");
+downloadBtn.addEventListener('click', () => {
 
-  html2canvas(cv).then(canvas => {
+downloadBtn.classList.add('downloading');
 
-    const imgData = canvas.toDataURL("image/png");
+setTimeout(() => {
 
-    const { jsPDF } = window.jspdf;
+downloadBtn.classList.remove('downloading');
 
-    const pdf = new jsPDF("p", "mm", "a4");
-
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-
-    const pdfHeight =
-      (canvas.height * pdfWidth) / canvas.width;
-
-    pdf.addImage(
-      imgData,
-      "PNG",
-      0,
-      0,
-      pdfWidth,
-      pdfHeight
-    );
-
-    pdf.save("Derek-CV.pdf");
-
-  });
+}, 1500);
 
 });
 
+}
 
 
