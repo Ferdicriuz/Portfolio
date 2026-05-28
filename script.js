@@ -32,34 +32,8 @@ mobileMenu.classList.remove('show-menu');
 
 });
 
-// THEME TOGGLE
-
-const themeBtn = document.querySelector('.theme-toggle');
-
-themeBtn.addEventListener('click', () => {
-
-document.body.classList.toggle('light-mode');
-
-const icon = themeBtn.querySelector('i');
-
-if(document.body.classList.contains('light-mode')){
-
-icon.classList.replace('fa-moon','fa-sun');
-
-}else{
-
-icon.classList.replace('fa-sun','fa-moon');
-
-}
-
-localStorage.setItem(
-'theme',
-document.body.classList.contains('light-mode')
-? 'light'
-: 'dark'
-);
-
-});
+const themeBtn =
+document.querySelector('.theme-toggle');
 
 // LOAD SAVED THEME
 
@@ -67,11 +41,37 @@ if(localStorage.getItem('theme') === 'light'){
 
 document.body.classList.add('light-mode');
 
-themeBtn
-.querySelector('i')
-.classList.replace('fa-moon','fa-sun');
+themeBtn.innerHTML =
+'<i class="fa-solid fa-sun"></i>';
 
 }
+
+// TOGGLE THEME
+
+themeBtn.addEventListener('click', () => {
+
+document.body.classList.toggle('light-mode');
+
+const isLight =
+document.body.classList.contains('light-mode');
+
+if(isLight){
+
+themeBtn.innerHTML =
+'<i class="fa-solid fa-sun"></i>';
+
+localStorage.setItem('theme', 'light');
+
+}else{
+
+themeBtn.innerHTML =
+'<i class="fa-solid fa-moon"></i>';
+
+localStorage.setItem('theme', 'dark');
+
+}
+
+});
 
 // CURSOR BLUR EFFECT
 

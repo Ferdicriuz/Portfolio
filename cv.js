@@ -1,43 +1,43 @@
-// THEME TOGGLE
+const themeBtn =
+document.querySelector('.theme-toggle');
 
-const themeBtn = document.querySelector('.theme-toggle');
+// LOAD SAVED THEME
+
+if(localStorage.getItem('theme') === 'light'){
+
+document.body.classList.add('light-mode');
+
+themeBtn.innerHTML =
+'<i class="fa-solid fa-sun"></i>';
+
+}
+
+// TOGGLE
 
 themeBtn.addEventListener('click', () => {
 
 document.body.classList.toggle('light-mode');
 
-const icon = themeBtn.querySelector('i');
+const isLight =
+document.body.classList.contains('light-mode');
 
-if(document.body.classList.contains('light-mode')){
+if(isLight){
 
-icon.classList.replace('fa-moon','fa-sun');
+themeBtn.innerHTML =
+'<i class="fa-solid fa-sun"></i>';
+
+localStorage.setItem('theme', 'light');
 
 }else{
 
-icon.classList.replace('fa-sun','fa-moon');
+themeBtn.innerHTML =
+'<i class="fa-solid fa-moon"></i>';
+
+localStorage.setItem('theme', 'dark');
 
 }
-
-localStorage.setItem(
-'cv-theme',
-document.body.classList.contains('light-mode')
-? 'light'
-: 'dark'
-);
 
 });
-
-// LOAD SAVED THEME
-
-if(localStorage.getItem('cv-theme') === 'light'){
-
-document.body.classList.add('light-mode');
-
-themeBtn
-.querySelector('i')
-.classList.replace('fa-moon','fa-sun');
-
-}
 
 // REVEAL ANIMATION
 
@@ -92,24 +92,6 @@ blur2.style.transform =
 
 });
 
-// DOWNLOAD ANIMATION
-
-const downloadBtn = document.querySelector(
-'.fa-download'
-);
-
-downloadBtn.addEventListener('click',()=>{
-
-downloadBtn.classList.add('fa-bounce');
-
-setTimeout(()=>{
-
-downloadBtn.classList.remove('fa-bounce');
-
-},1000);
-
-});
-
 // ACTIVE GLOW EFFECT
 
 const projectCards = document.querySelectorAll(
@@ -133,18 +115,18 @@ card.style.boxShadow = 'none';
 
 });
 
-const downloadBtn =
+const downloadButton =
 document.querySelector('.downloadBtn');
 
-if(downloadBtn){
+if(downloadButton){
 
-downloadBtn.addEventListener('click', () => {
+downloadButton.addEventListener('click', () => {
 
-downloadBtn.classList.add('downloading');
+downloadButton.classList.add('downloading');
 
 setTimeout(() => {
 
-downloadBtn.classList.remove('downloading');
+downloadButton.classList.remove('downloading');
 
 }, 1500);
 
